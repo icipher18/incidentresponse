@@ -1,0 +1,22 @@
+Penetration Testing
+
+Penetration testing takes vulnerability assessment one step farther. It does not stop at identifying vulnerabilities; it also uses those vulnerabilities to expose other weaknesses in the network. Penetration testing consists of five different phases:
+
+■■ Phase 1: Preparation
+
+■■ Phase 2: Information gathering
+
+■■ Phase 3: Information evaluation and risk analysis
+
+■■ Phase 4: Active penetration
+
+■■ Phase 5: Analysis and reporting
+Penetration Testing Modes
+
+Penetration testing also has three different modes. Those modes are:
+
+■■ White box / hat: Tester has complete knowledge of the systems and infrastructure being tested
+
+■■ Gray box / hat: A hybrid between white and black box; this mode can vary greatly
+
+■■ Black box / hat: Assumes no prior knowledge of the systems or infrastructure being tested

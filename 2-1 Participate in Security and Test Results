@@ -1,0 +1,41 @@
+Participate in Security and Test Results
+
+Security assessment activities include but not are limited to vulnerability scanning, penetration testing, internal-external assessment, and interpreting the results of the results.
+Vulnerability Scanning and Analysis
+
+Vulnerability scanning is simply the process of checking a system for weaknesses. These vulnerabilities can take the form of applications or operating systems that are missing patches, misconfiguration of systems, unnecessary applications, or open ports. The goal of a vulnerability assessment is to study the security level of the systems, identify problems, offer mitigation techniques, and assist in prioritizing improvements.
+
+The benefits of vulnerability testing include the following:
+
+■■ It identifies system vulnerabilities.
+■■ It allows for the prioritization of mitigation tasks based on system criticality and risk.
+■■ It is considered a useful tool for comparing security posture over time especially when done consistently each period. The disadvantages of vulnerability testing include:
+■■ It may not effectively focus efforts if the test is not designed appropriately. Sometimes testers “bite off more than they can chew.”
+■■ It has the potential to crash the network or host being tested if dangerous tests are chosen. (Innocent and noninvasive tests have been known to cause system crashes.)
+
+Vulnerability-Testing Software Categories
+
+Note that vulnerability-testing software is often placed into two broad categories:
+
+■■ General vulnerability
+■■ Application-specific vulnerability
+
+General vulnerability software probes hosts and operating systems for known flaws. It also probes common applications for flaws. Application-specific vulnerability tools are designed specifically to analyze certain types of application software. For example, database scanners optimized to understand the deep issues/weaknesses of Oracle databases, Microsoft SQL Server, etc., and can uncover implementation problems therein. Scanners optimized for web servers look deeply into issues surrounding those systems.
+
+Vulnerability scanning software, in general, is often referred to as V/A (vulnerability assessment) software and sometimes combines a port mapping function to identify which hosts are where and the applications they offer with
+
+further analysis that assigns vulnerabilities to applications. Good vulnerability software will offer mitigation techniques or links to manufacturer websites for further research. This stage of security testing is often an automated software process. It is also beneficial to use multiple tools and cross-reference the results of those tools for a more accurate picture. As with any automated process, you need to examine the results closely to ensure that they are accurate for the organization’s environment.
+Vulnerability Testing Qualities
+
+Vulnerability testing usually employs software specific to the activity and tends to have the following qualities:
+
+■■ OS fingerprinting: This technique is used to identify the operating system in use on a target. OS fingerprinting is the process where a scanner can determine the operating system of the host by analyzing the TCP/IP stack flag settings. These settings vary on each operating system from vendor to vendor or by TCP/IP stack analysis and banner grabbing. Banner grabbing is reading the response banner presented for several ports such as FTP, HTTP, and Telnet. This function is sometimes built into mapping software and sometimes into vulnerability software.
+■■ Stimulus and response algorithms: These are techniques to identify application software versions, then referencing these versions with known vulnerabilities. Stimulus involves sending one or more packets at the target. Depending on the response, the tester can infer information about the target’s applications.
+For example, to determine the version of the HTTP server, the vulnerability testing software might send an HTTP GET request to a web server, just like a browser would (the stimulus), and read the reply information it receives back (the response) for information that details the fact that it is Apache version X, IIS version Y, etc.
+■■ Privileged logon ability: The ability to automatically log on to a host or group of hosts with user credentials (administrator-level or other level) for a deeper “authorized” look at systems is desirable.
+■■ Cross-referencing: OS and applications/services (discovered during the port-mapping phase) should be cross-referenced to identify possible vulnerabilities. For example, if OS fingerprinting reveals that the host runs Red Hat Linux 8.0 and that portmapper is one of the listening programs, any pre-8.0 portmapper vulnerabilities can likely be ruled out.
+
+Keep in mind that old vulnerabilities have resurfaced in later versions of code even though they were patched at one time. While these instances may occur, the filtering based on OS and application fingerprinting will help you better target systems and use your time more effectively.
+
+■■ Update capability: Scanners must be kept up-to-date with the latest vulnerability signatures; otherwise, they will not be able to detect newer problems and vulnerabilities. Commercial tools that do not have quality personnel dedicated to updating the product are of reduced effectiveness. Likewise, open-source scanners should have a qualified following to keep them up to date.
+■■ Reporting capability: Without the ability to report, a scanner does not serve much purpose. Good scanners provide the ability to export scan data in a variety of formats, including viewing in HTML or PDF format or to third-party reporting software, and are configurable enough to give the ability to filter reports into high-, mid-, and low-level detail depending on the intended audience for the report. Reports are used as a basis for determining mitigation activities later. Additionally, many scanners are now feeding automated risk management dashboards using application portal interfaces.

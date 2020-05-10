@@ -1,0 +1,53 @@
+Reconnaissance
+
+Often reconnaissance is needed by a covert penetration tester who has not been granted regular access to perform a cooperative test. These testers are challenged with having little to no knowledge of the system and must collect it from other sources to form the basis of the test attack.
+
+Reconnaissance is necessary for these testers because they likely have no idea what they will be testing at the commencement of the test. Their orders are usually “see what you can find and get into but do not damage anything.”
+
+After defining what should be tested based on the information collected, always check with the people who hired you to ensure that the systems you intend to penetrate are actually owned by the organization. Doing otherwise may put delicate systems in harm’s way or the tester may test something not owned by the organization ordering the test (leading to possible legal repercussions and financial exposure). These parameters should be defined before the test.
+Social Engineering and Low-Tech Reconnaissance
+
+Social engineering is an activity that involves the manipulation of people or physical reconnaissance to get information for use in exploitation or testing activities. Low-tech reconnaissance uses simple technical means to obtain information.
+
+Before attackers or testers make an attempt on the organization’s systems, they can learn about the target using low-technology techniques such as:
+
+■■ Directly visit a target’s web server and search through it for information.
+
+■■ View a web page’s source for information about what tools might have been used to construct or run it.
+
+■■ Gather/acquire employee contact information.
+
+■■ Corporate culture information to pick up internally used “lingo” and product names.
+
+■■ Find out who a company’s business partners are.
+
+■■ “Googling” a target. “Googling” a target refers to the reconnaissance activity whereby an attacker uses search engines that have previously indexed a target site. The attacker can search for files of a particular type that may contain information they can use for further attacks. Google and other search engines can be very powerful tools to a cracker because of the volume of data they are able to organize.
+
+■■ Example: Search a particular website for spreadsheet files containing the word “employee” or “address” or “accounting.”
+
+■■ Make sure that web servers are configured correctly and require authentication to access private information.
+
+■■ Dumpster diving: Retrieving improperly discarded computer media and paper records for gleaning private information about an organization.
+
+■■ Computer hard drives and removable media (floppies, USB drives, CDs, etc.) thrown away or sold without properly degaussing to remove all private information.
+
+■■ Equipment (routers, switches, and specialized data processing devices) discarded without configuration data removed without a trace.
+
+■■ Shoulder surfing: Furtively collecting information by standing within view of someone typing a password or sensitive information (e.g., someone else’s password).
+
+■■ Social engineering using the telephone: Attackers often pose as an official technical support person or fellow employee and attempt to build a rapport with a user through small talk. The attacker may ask for the user’s assistance with (false) troubleshooting “tests” aimed at helping the attacker collect information about the system. If the attacker finds a particularly “helpful” user, he might be bold enough to ask for their username and password because “we’ve been having trouble with the router gateway products interfacing with the LDAP directories where your username and password are stored and we think it is getting corrupted as it passes over the network…. So if you could just tell me what it is that would be great,” or some such nonsense aimed at gaining the user’s confidence. The other possible scenarios that can be used with social engineering to gain information are only limited by your imagination.
+
+■■ Usenet Searches: Usenet postings can give away information about a company’s internal system design and problems that exist within systems.
+
+For example: “I need advice on my firewall. It is an XYZ brand system and I have it configured to do this, that, and the other thing. Can anyone help me?—signed joe@big_company_everyone_knows.com”
+Whois Attacks
+
+Whois is a system that records Internet registration information, including the company that owns the domain, administrative contacts, technical contacts, when the record of domain ownership expires, and DNS servers authoritative for maintaining host IP addresses and their associated friendly names for the domains you are testing. With this information, you can use other online tools to “dig” for information about the servers visible on the Internet without ever sending a single probing packet at the Internet connection. The contact information provided by Whois can also be used for social engineering and war dialing.
+
+The following are example attacks:
+
+■■ Using Whois, collect information about DNS servers authoritative for maintaining host IP addresses for a particular domain.
+
+■■ Using Whois, identify the administrative contact and his telephone number. Use social engineering on that person or security-unaware staff at the main telephone number to obtain unauthorized information.
+
+■■ Using Whois, identify the technical contact and her area code and exchange (telephone number). Using war dialing software against the block of phone numbers in that exchange, you attempt to make an unauthorized connection with a modem for the purpose of gaining backdoor entry to the system.

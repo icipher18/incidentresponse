@@ -1,0 +1,115 @@
+White Box / Hat
+
+These testers perform tests with the knowledge of the security and/or IT staff. They are given physical access to the network and sometimes even a normal username and password.
+
+Qualities include:
+
+■■ Full cooperation of organization
+
+■■ Planned test times
+
+■■ Network diagrams and systems configurations are supplied
+
+Pros:
+
+■■ You should get good reaction and support from the organization being tested and fixes can occur more rapidly
+
+■■ Good to use as a dry run for testing the organization’s incident response procedures
+
+Cons:
+
+■■ An inaccurate picture of the organization’s network response capabilities may appear because the organization is prepared for the “attack”
+Black Box / Hat
+
+These testers generally perform unannounced tests that even the security and/ or IT staff may not know about. Sometimes, these tests are ordered by senior managers to test their staff and the systems for which the staff are responsible. Other times, the IT staff will hire covert testers under the agreement that the testers can and will test at any given time, such as four times per year. The object is generally to see what they can see and get into whatever they can get into, without causing harm, of course.
+
+Qualities include:
+
+■■ Play the role of hostile attacker
+
+■■ Perform testing without warning
+
+■■ Receive little to no guidance from the organization being tested
+
+Pros:
+
+■■ Get a better overall view of the network’s real responses without someone
+
+“being prepared” for the testing
+
+Cons:
+
+■■ The staff may take the findings personally and show disdain to the testing team and management
+Phase 1: Preparation
+
+Without defined goals, security testing can be a meaningless and costly exercise. The following are examples of some high-level goals for security testing, thereby providing value and meaning for the organization:
+
+■■ Anyone directly or indirectly sanctioned by the organization’s management to perform testing should be doing so to identify vulnerabilities that can be quantified and placed in a ranking for subsequent mitigation.
+
+■■ Since a security test is merely the evaluation of security on a system at a point in time, the results should be documented and compared with the results at other points in time. Analysis that compares results across times paints a picture of how well or poorly the systems are being protected across those periods (otherwise known as base lining).
+
+■■ Security testing can be a form of self-audit by the IT staff to prepare them for the “real” audits performed by internal and external auditors.
+
+■■ In the case of covert testing, testers aim to actually compromise security, penetrate systems, and determine if the IT staff notices the intrusion and an acceptable response has occurred.
+
+■■ It is extremely important to ensure that you have business support and authorization (in accordance with a penetration testing policy) before conducting a penetration test. It is advisable to get this support and permission in writing before conducting the testing.
+
+■■ Penetration test software tools. Software tools exist to assist in the testing of systems from many angles. Tools help interpret how a system functions for evaluating its security. This section presents some tools available on the commercial market and in the open source space as a means to the testing end. Do not interpret the listing of a tool as a recommendation for its use. Likewise, just because a tool is not listed does not mean it is not worth considering. Choosing a tool to test a particular aspect is a personal or organizational choice. Some points to consider regarding the use of software tools in the security testing
+
+process:
+
+■■ Do not let tools drive the security testing. Develop a strategy and pick the right tool mix for discovery and testing based on the overall testing plan.
+
+■■ Use tools specific to the testing environment. For example, if the aim is to test the application of operating system patches on a particular platform, analyze the available ways you might accomplish this process by seeing what the vendor offers and compare this against third-party tools. Pick tools that offer the best performance tempered with the budget constraints.
+
+■■ Tool functions often overlap. The features found on one tool may be better than those on another.
+
+■■ Security testing tools can make mistakes, especially network-based types that rely on circumstantial evidence of vulnerability. Further investigation is often necessary to determine if the tool interpreted an alleged vulnerability correctly.
+
+■■ Network tools sometimes negatively affect uptime; therefore, these tests should often be scheduled for off-hours execution due to the fact that they can potentially cause the following to occur:
+
+■■ Increasing network traffic load
+
+■■ Affecting unstable platforms that react poorly to unusual inputs
+
+■■ Placement of probes is critical. When possible, place them on the same segment you are testing so that filtering devices and intrusion detection systems do not alter the results (unless you are planning to test how intrusion detection systems react).
+
+■■ Be aware that the models for detection of vulnerabilities are inconsistent among different toolsets; therefore, results should be studied and made reasonably consistent among different tools.
+
+■■ Analyzing testing results. It is often easier to understand the testing results by creating a graphical depiction in a simple matrix of vulnerabilities, ratings for each, and an overall vulnerability index derived as the product of vulnerability and system criticality. More complicated matrices may include details describing each vulnerability and sometimes ways to mitigate it or ways to confirm the vulnerability.
+Reporting
+
+Tests should conclude with a report and matrices detailing:
+
+■■ Information derived publicly
+
+■■ Information derived through social engineering or other covert ways
+
+■■ Hosts tested and their addresses
+
+■■ Services found
+
+■■ Possible vulnerabilities
+
+■■ Vulnerability ratings for each
+
+■■ System criticality
+
+■■ Overall vulnerability rating
+
+■■ Vulnerabilities confirmation
+
+■■ Mitigation suggestions
+
+Testers often present findings matrices that list each system and the vulnerabilities found for each with a “high, medium, low” ranking. The intent is to provide the recipient a list of what should be fixed first. The problem with this method is that it does not take into account the criticality of the system in question. You need a way to differentiate among the urgency for fixing “high” vulnerabilities across systems. Therefore, reports should rank true vulnerabilities by seriousness, taking into account how the organization views the asset’s value. Systems of high value may have their medium and low vulnerabilities fixed before a system of medium value has any of its vulnerabilities fixed. This criticality is determined by the organization, and the reports and matrices should help reflect a suggested path to rectifying the situation. For example, the organization has received a testing report listing the same two high vulnerabilities for a print server and an accounting database server. The database server is certainly more critical to the organization; therefore, its problems should be mitigated before those of the print server.
+
+As another example, assume the organization has assigned a high value to the database server that houses data for the web server. The web server itself has no data but is considered medium value. In contrast, the FTP server is merely for convenience and is assigned a low value. A security-testing matrix may show several high vulnerabilities for the low-value FTP server. It may also list high vulnerabilities for both the database server and the web server. The organization will likely be interested in fixing the high vulnerabilities first on the database server, then the web server, and then the FTP server. This level of triage is further complicated by trust and access between systems. If the web server gets the new pages and content from the FTP server, this may increase the priority of the FTP server issues over that of the usually low-value FTP server issues.
+Phase 2: Reconnaissance and Network Mapping Techniques
+
+Basic security testing activities include reconnaissance and network mapping.
+
+■■ Reconnaissance: Collecting information about the organization from publicly available sources, social engineering, and low-tech methods. This information forms the test attack basis by providing useful information to the tester.
+
+■■ Network mapping: Collecting information about the organization’s Internet connectivity and available hosts by (usually) using automated mapping software tools. In the case of internal studies, the internal network architecture of available systems is mapped. This information further solidifies the tesdaat attack basis by providing even more information to the tester about the services running on the network and is often the step before vulnerability testing, which is covered in the next section.
+
+Note that penetration testing is an art. This means that different IT security practitioners have different methods for testing. This section attempts to note the highlights to differentiate among the various types and provides information on tools that assist in the endeavor. Security testing is an ethical responsibility. Testing must always be authorized, and the techniques should never be used for malice.
