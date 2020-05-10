@@ -1,0 +1,64 @@
+Events of Interest
+Monitoring Terminology
+
+The purpose of this list is to define by example and reinforce terminology commonly used when discussing monitoring technology.
+
+■■ Safeguard: A built-in proactive security control implemented to provide protection against threats.
+
+■■ Countermeasure: An added-on reactive security controls.
+
+■■ Vulnerability: A system weakness.
+
+■■ Exploit: A particular attack. It is named this way because these attacks exploit system vulnerabilities.
+
+■■ Signature: A string of characters or activities found within processes or data communications that describes a known system attack. Some monitoring systems identify attacks by means of a signature.
+
+■■ False positive: Monitoring triggered an event but nothing was actually wrong, and in doing so the monitoring has incorrectly identified benign communications as a danger.
+
+■■ False negative: The monitoring system missed reporting an exploit event by not firing an alarm. This is bad.
+
+■■ True positive: The monitoring system recognized an exploit event correctly.
+
+■■ True negative: The monitoring system has not recognized benign traffic as cause for concern. In other words, it does nothing when nothing needs to be done. This is good.
+
+■■ Tuning: Customizing a monitoring system to your environment.
+
+■■ Promiscuous interface: A network interface that collects and processes all of the packets sent to it regardless of the destination MAC address.
+
+And then promiscuous interface is going to allow us to scan, to capture,
+to monitor information through one or more network cards.
+But to modify the way the network card works, normally network interfaces
+are going to examine traffic at layer two of the OSI model,
+specifically at the Mac address sub layer of the layer two in the OSI model.
+And they're going to look at the packet header and look at whether or
+not the Mac address belongs to that interface.
+The Mac address that's in that packet header belongs to that interface,
+the system will effectively continue processing the packet up the OSI model
+chain to get to wherever level that packet needs to be used or interacted with and
+somehow dealt with.
+If the Mac address does not match, we're going to effectively button that packet up
+and say okay, no problem, not for me, and send it on along its way.
+Not paying attention to it, not recording it, not doing anything with it, and
+effectively forgetting it as soon as it's moved through the system.
+
+--> What promiscuous mode does is it changes the way that behavior occurs.
+Instead of getting rid of the packets that don't match our Mac address
+as the recipient, we keep a copy of all these packets because we want to have them
+recorded in our monitor so we can see what's going on with them.
+So literally it's like moving everything through a photocopy machine, and every
+packet gets copied before it goes back out the other side of the interface, and on
+along its way until it will be ultimately delivered to wherever it needs to go.
+This is what a promiscuous interface does.
+It sucks up and keeps track of and a record of all traffic that moves through
+it, contrary to the normal way in which the interface would work,
+which that it is a non-promiscuous mode, it does not do this.
+We use special drivers or settings in the network card or
+through software to be able to turn on promiscuous mode.
+Network interfaces do support this, but
+they do have drivers that will allow this to occur.
+In Linux, you use Lin p cap, in Windows,
+the Windows port of Lin p cap is Win p cap.
+This is a promiscuous card driver, a promiscuous remote driver, that
+generically will turn almost any network interface into a promiscuous interface.
+And we will load that driver, or the programs we'll use to scan, we'll load
+that driver on our behalf, and then the system can run in promiscuous mode. 

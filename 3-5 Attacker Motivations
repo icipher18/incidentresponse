@@ -1,0 +1,95 @@
+Attacker Motivations
+
+Motivations typically fall into one of the following types:
+
+■■ Notoriety, ego, or sport: Exemplifies the attacker’s “power” to his or her audience, whether to just a few people or to the world. To the attacker, the inherent challenge is “I want to see if I can do it, and I want everyone to know about it.”
+
+■■ Greed and profit: The attacker is attempting personal financial gain or financial gain of a client; that is, an attacker might have been hired by a business to furtively damage a competitor’s system or gain unauthorized access to the competitor’s data. An attacker may use or resell information found on systems, such as credit card numbers.
+
+■■ Political agenda: Attacking a political nemesis physically or electronically is seen as a way to further one’s own agenda or ideals or call attention to a cause.
+
+■■ Revenge: The overriding motivation behind revenge in the attacker’s eyes is, “I’ve been wronged, and I am going to get you back.” Revenge is often exacted by former employees or those who were at one point in time trusted by the organization that is now being attacked.
+
+■■ Curiosity: They do not really want to do any damage. They just want to see how it works.
+
+There is one category of “attacker” that is often overlooked, and while it may seem unfair to some to lump them in with attackers, organizations avoid them at their peril. These are the individuals within an organization who through either ignorance, ego, or stress causes unintended intrusions to occur. They could be the IT system administrator who finds it easier to grant everyone administrative rights to a server rather than take the time to define access controls correctly, or the administrative assistant who uses someone else’s login to log in to the HR system just because it was already logged in. These individuals can cause as much damage to a company as someone who is trying to attack it, and the incidents they create need to be addressed like any other intrusion incident.
+Intrusions
+
+Intrusions are acts by persons, organizations, or systems that violate the security framework of the recipient. In some instances, it is easier to identify an “intrusion” as a “violation.”
+
+For example, you have a policy that prohibits users from using computing resources while logged in as someone else. While in the true sense of the definition, the event is an intrusion, it is more acceptable to refer to the event as a violation. Intrusions are considered attacks but are not just limited to computing systems.
+
+If something is classified as an intrusion, it will fall into one of following two categories:
+
+■■ Overt, which are generally noticeable immediately. Examples of overt intrusion include the following:
+
+■■ Someone breaking into your building and stealing computing hardware
+
+■■ Two people robbing a bank
+
+■■ Someone stealing copper wiring out of the electrical closet
+
+■■ Flooding an e-commerce site with too much data from too many sources, thereby rendering the site useless for legitimate customers
+
+■■ Attackers defacing a website
+
+■■ Covert, which are not always noticeable right away, if at all. These, by their nature, are the most difficult to identify. Examples of covert intrusions include the following:
+
+■■ A waiter stealing a credit card number after the customer has paid a bill and using it on the web that evening
+
+■■ An accounting department employee manipulating financial accounts for illegal and unauthorized personal financial gain
+
+■■ An authorized user who improperly obtains system administrator login credentials to access private company records to which he is not authorized
+
+■■ An attacker who poses as an authorized computer support representative to gain the trust of an unknowing user, to obtain information for use in a computer attack
+
+■■ A hacker who gets hired as IT staff so he can gain access to organizational systems
+Events
+
+An event is a single occurrence that may or may not indicate an intrusion. All intrusions contain events, but not all events are intrusions.
+
+For example, a user account is locked for bad password attempts. That is a security event. If it was just the user forgetting what she changed her password to last Friday, it is not an intrusion; however, if the user claims that she did not try to log in before her account was locked, it might be an intrusion.
+Types of Monitoring
+
+There are two basic classes of monitoring devices:
+
+■■ Real-time monitoring provides a means for immediately identifying and sometimes stopping (depending on the type of system used) overt and covert events. They include some types of network and host intrusion detection systems. These systems keep watch on systems and (can) alert administrators as unauthorized activity is happening. They can also log events for subsequent analysis if needed. A real-time monitor for computers is like the burglar alarm for your home. When someone breaks in, it sounds the alarm.
+
+■■ Non-real-time monitoring provides a means for saving important information about system events and possibly monitoring the integrity of system configurations after the fact. These technologies include application logging, system logging, and integrity monitoring. Logging and integrity systems might tell you that a burglar was at your home, but the burglar is likely gone by the time you find out. This does not mean that non-real-time systems are not as good as real-time systems. Each fulfills a different niche in monitoring. These system logs would be more like the footprints or fingerprints a burglar would leave behind. Monitoring should be designed to positively identify actual attacks (true positive) but not identify regular communications as a threat (false positive), or do everything possible to increase the identification of actual attacks and decrease the false-positive notifications. Monitoring technology needs to be “tuned,” which is the process of customizing the default configuration to the unique needs of your systems. To tune out alarms that are harmless (false positives), the organization must know what types of data traffic are considered acceptable. If security framework, data classification documentation, and business flow documentation exist, the organization should have a good idea of what information should be on its network and how it should be moving between devices.
+
+--> File Integrity Checkers
+When a system is compromised, an attacker will often alter certain key files to provide continued access and prevent detection. By applying a message digest (cryptographic hash) to key files and then checking the files periodically to ensure the hash has not altered, a degree of assurance is maintained.
+On detecting a change, an alert will be triggered. Furthermore, following an attack, the same files can have their integrity checked to assess the extent of the compromise.
+
+Some examples include:
+
+■■ Cimtrak
+■■ Advanced Intrusion Detection Environment (AIDE)
+■■ Verisys
+
+Continuous/Compliance Monitoring
+
+Monitoring is the ongoing, near-time analysis of traditional and non-traditional data sources, related to targeted business activities and controls, to proactively identify, trend, and respond to potential compliance “signals” and to be predictive of user behavior. Monitoring is considered distinct from auditing, which is typically retrospective and often limited by time, frequency, and scope. Monitoring results inform corrective action plans, including full-scale compliance investigations, policy changes, enhanced training and communications, additional monitoring, focused audits, and other programmatic responses.
+
+Continuous monitoring represents the desire to have real-time risk information available at any time to make organizational decisions. Continuous monitoring systems are comprised of sensor networks, input from assessments, logging, and risk management. When implemented correctly, continuous monitoring systems can provide organizations with a sense of information security risk; when not configured correctly, they can lead an organization to false panic or a false sense of security
+
+Question number 1, what is the difference between real-time monitoring and
+non-real-time monitoring?
+Well, we've just talked about this recently.
+Real-time monitoring provides a means for relatively immediately
+identifying trends and information you may want to take a look at,
+even stopping certain activities from occurring.
+Non-real-time monitoring provides a means to save that information somewhere,
+archive it, look at it historically over time and
+check it out at some point in the future when it's convenient for us,
+when we want to take a look at it, or reactively after the fact to go back and
+to understand something that did happen and delve into it to figure out why.
+We can always do it for or use it from that perspective as well.
+Question number 2, what is the difference between IDSs and
+IPSs, intrusion detection and intrusion prevention systems?
+IDSs are passive systems that will monitor and alert but
+are not able to take any retaliatory or some sort of additional action in any way.
+Whereas an IPS is primarily focused on monitoring with the ability to react to
+information it sees in real time, it can retaliate, it can reconfigure,
+it can modify traffic flows, could do all sorts of stuff.
+want to make sure we're aware of that and we understand that as well. 

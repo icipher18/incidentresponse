@@ -1,0 +1,23 @@
+Compliance
+
+Compliance with monitoring and reporting regulations is often a significant factor in the decision to deploy a SIEM system. Other policy requirements of a specific organization may also play a role.
+
+Examples of regulatory requirements include the Health Insurance Portability and Accountability Act (HIPAA) for healthcare providers in the United States, or the Payment Card Industry’s Data Security Standard (PCI-DSS) for organizations that handle payment card information. A SIEM can help the organization to comply with monitoring mandates and document their compliance to auditors.
+
+Enhanced Network Security and Improved IT/Security Operations
+
+Attacks against network assets are a daily occurrence for many organizations. Attack sources can be inside or outside the organization’s network. As the boundaries of the enterprise network expand, the role of network security infrastructure must expand as well. Typically, security operations staff deploys many security measures, such as firewalls, IDS sensors, IPS appliances, web and e-mail content protection, and network authentication services. All of these can generate significant amounts of information, which the security operations staff can use to identify threats that could harm network security and operations.
+
+For example, when an employee laptop becomes infected by malware, it may discover other systems on the corporate network, and then attempt to attack those systems, spreading the infection. Each system under attack can report the malicious activity to the SIEM. The SIEM system can correlate those individual reports into a single alert that identifies the original infected system and its attempted targets. In this case, the SIEM’s ability to collect and correlate logs of failed authentication attempts allows security operations personnel to determine which system is infected so that it can be isolated from the network until the malware is removed.
+
+In some cases, it may be possible to use information from a switch or other network access device to automatically disable the network connection until remediation takes place. The SIEM can provide this information in both real-time alerts and historical reports that summarize the security status of the enterprise network over a large data collection, typically on the order of months rather than days. This historical perspective enables the security administrators to establish a baseline for normal network operations, so they can focus their daily effort on any new or abnormal security events.
+
+Full Packet Capture
+
+Full packet capture devices typically sit at the ingress and egress points of an organization’s network. These devices capture every single information packet that flows across the border, making them indispensable tools as they capture the raw packet data, which can be analyzed later should an incident occur. As full packet capture devices capture every packet, they require an organizational network architecture that consolidates traffic to as few points as possible for collection. Many organizations use VPN tunnels and mandatory routing configurations for hosts to ensure all traffic is sent through a full packet capture device.
+
+Full packet capture devices can consume tremendous amounts of storage. As every packet that flows into or out of the organization is captured, be mindful of the storage capacities needed to maintain a useful packet capture. Knowing a breach occurred three months ago and only having one month of packet capture is not going to be helpful.
+
+Most packet capture devices also come with the ability to do a “packet dump” or extract a certain cross section of the traffic as defined by criteria such as IP, protocol, or time of day. This traffic can then be analyzed using specialized tools or even played in a simulated browser if the traffic is web traffic. Full packet capture is indispensable in collecting evidence of workplace misconduct and understanding an attack. Often signatures for IDS/IPS systems come from the analysis and understanding of packet dumps from full packet capture systems.
+
+While full packet capture systems are extremely useful, it is important to note what they do not do. Most if not all are not IDS or IPS systems. Additionally, they may not include the native ability to break encrypted transmissions such as SSL and HTTPS communications. Therefore, you must understand how full packet capture fits with other information security technologies.

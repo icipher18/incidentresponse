@@ -1,0 +1,35 @@
+Implementation Issues for Monitoring
+
+Remember the security tenets of confidentiality, integrity, and availability. IDS can alert to these conditions by matching known conditions (signatures) with unknown but suspect conditions (anomalies).
+
+■■ Confidentiality: Unauthorized access may breach confidentiality
+
+■■ Integrity: Corruption due to an attack destabilizes integrity
+
+■■ Availability: Denial of service keeps data from being available
+Monitoring Control
+
+Decisions about the types to deploy and where to deploy are functions of budget and system criticality need to be made. Implementation of monitoring should be supported by policy and justified by the risk assessment. The actual deployment of the sensors will depend on the value of the assets. Monitoring control deployment considerations should include:
+
+■■ Choose one or more monitoring technique types — HIDS/NIDS/logging
+
+■■ Choose an analysis paradigm — statistical anomaly/signature
+
+■■ Choose a system that meets timeliness objectives — real-time/scheduled (non-real-time)
+
+■■ Choose a reporting mechanism for incident response — push or pull; that is, does a management system query the monitoring devices for data or does the device push the data to a repository where it is stored or analyzed?
+
+■■ Make the update mechanisms part of policy with well-defined procedures, especially for signature-based devices
+
+■■ Tune monitoring systems to reflect the environment they support
+
+■■ Choose automatic response mechanisms wisely
+Other Considerations
+
+■■ Maintenance and tuning: For the long-term use and effectiveness of the monitoring controls, systems should be cared for like any other mission critical component.
+
+■■ Keep IDS signatures (if applicable) current: Signature-based IDS must be kept up to date as previously unknown vulnerabilities are revealed. Take, for example, the ineffectiveness of a host antivirus system with virus signatures that are a year old. Since several new viruses emerge each week, a system with old signatures may be effective for the old exploits but the system is defenseless for new viruses. IDS systems operate on the same principle. IDS vendors often have notification systems to alert you about new signature definitions or the capability for automatic update.
+
+■■ Keep IDS subsystems current: As new generations of IDS subsystems (the operating systems and software engines that drive the system) become available, consider testing then deploying these to know if they add to your capability to detect exploits but do not introduce instability
+
+■■ Tune IDS: NIDS systems have limitations on how much processing they can handle; therefore, limit what the NIDS must monitor based on your environment. For example, if you do not have any Windows-based hosts, consider disabling monitoring for Windows-based exploits. Conversely, if you have a UNIX environment and UNIX-based signatures are not enabled, you will likely miss these events. As system changes are made, the security systems that protect them should be considered. During the change control process, new changes should factor in how the security systems will handle them.

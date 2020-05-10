@@ -1,0 +1,213 @@
+Log Retention
+
+Now that all the organization’s systems are logging and they are being reviewed for anomalies, how long is the organization required to keep the logs? How should they store the logs? Automation is one of the keys to successful log file management. There are many different tools both commercial and open source that can automate different phases of log file retention. Scripts are available on the Internet or can be written in-house, which can automate some of the processes needed in log management. Some key areas to research for log file automation tools include:
+
+■■ Log consolidation tools: Tools that automatically copy log entries to a central server
+
+■■ Log retention tools: Tools that will move old log files to separate folders for backup and purge old data from log files
+
+Business and legal requirements for log retention will vary from economies, countries, and industries. Some businesses will have no requirements for data retention. Others are mandated by the nature of their business or by business partners to comply with certain retention data. For example, the Payment Card Industry (PCI) Data Security Standard requires that businesses retain one year of log data in support of PCI with a minimum of three months’ worth of data available online. Some federal regulations have requirements for data retention as well. If unsure if a business has any requirements for log file retention, check with auditors and the organization’s legal team. They should know for sure. So, if a business has no business or legal requirements to retain log data, how long should the organization keep it? The first people asked should be the legal department. Most legal departments have very specific guidelines for data retention, and those guidelines may drive the log retention policy. If legal does not provide guidance on how long to keep logs, try this technique.
+
+Maintain three months’ worth of logs online. Once the three-month threshold has passed, move the log files off to tape or other backup media. Keep offline backup files for a year; at the end of the year, see how far back the longest time was required to look for data, add three months to that time, document as the organizational standard, and utilize it for the maximum length of time to retain offline log file.
+Centralized Logging (syslog and log aggregation)
+
+Logs are a critical part of any system; they provide insight into what a system is doing as well as what happened. Virtually every process running on a system generates logs in some form or another. Usually, these logs are written to files on local disks. When your system grows to multiple hosts, managing the logs and accessing them can get complicated. Searching for a particular error across hundreds of log files on hundreds of servers is difficult without good tools. A common approach to this problem is to set up a centralized logging solution so that multiple logs can be aggregated in a central location.
+Syslog
+
+Another option that you probably already have installed is syslog. Most people use rsyslog or syslog-ng, which are two syslog implementations. These daemons allow processes to send log messages to them, and the syslog configuration determines how they are stored. In a centralized logging setup, a central syslog daemon is set up on your network and the client logging daemons are set up to forward messages to the central daemon.
+Distributed Log Collectors
+
+All of these have their specific features and differences but their architectures are fairly similar. They generally consist of logging clients and/or agents on each specific host. The agents forward logs to a cluster of collectors, which in turn forward the messages to a scalable storage tier.
+
+The idea is that the collection tier is horizontally scalable to grow with the increased number of logging hosts and messages. Similarly, the storage tier is also intended to scale horizontally to grow with increased volume.
+
+Some examples include:
+
+■■ Scribe: Scribe is scalable and reliable log aggregation server used and released by Facebook as open source. Scribe is written in C++ and uses Thrift for the protocol encoding. Since it uses thrift, virtually any language can work with it.
+
+■■ Flume: Flume is an Apache project for collecting, aggregating, and moving large amounts of log data. It stores all this data on HDFS.
+
+■■ Logstash: Logstash lets you ship, parse, and index logs from any source. It works by defining inputs (files, syslog, etc.), filters (grep, split, multiline, etc.) and outputs (elasticsearch, mongodb, etc.). It also provides a UI for accessing and searching your logs.
+
+■■ Chukwa: Chukwa is another Apache project that collects logs onto HDFS.
+
+■■ Graylog2: Graylog2 provides a UI for searching and analyzing logs. Logs are stored in MongoDB and/or elasticsearch. Graylog2 also provides the GELF logging format to overcome some issues with syslog message: 1024 byte limit and unstructured log messages. If you are logging long stacktraces, you may want to look into GELF.
+
+■■ splunk: splunk is a commercial product that has been around for several years. It provides a whole host of features for not only collecting logs but also analyzing and viewing them.
+Hosted Logging Services
+
+There are also several hosted “logging as a service” providers as well. The benefit is that you only need to configure your syslog forwarders or agents and they manage the collection, storage, and access to the logs. They set up and maintain the entire infrastructure, freeing you up to focus on your application. Each service provides a simple setup (usually syslog forwarding based), an API, and a UI to support search and analysis.
+
+Some examples include:
+
+■■ loggly
+
+■■ papertrail
+
+■■ logentries
+
+Configuring Event Sources (s-flow, NetFlow, sniffer)
+
+Network monitoring and measurement have become more and more important in the modern network. In the past, administrators might only monitor a few network devices or less than a hundred computers. The network bandwidth may have been just 10 or 100 Mbps; however, now administrators have to deal with not only higher speed wired network (10 Gbps and above) but also wireless networks. They need more sophisticated network traffic monitoring and analysis tools in order to maintain network system stability and availability, allowing them to fix network problems in real time, to avoid network failure, to ensure the network security strength, and to make good decisions for network planning.
+
+When a network failure occurs, monitoring agents have to detect, isolate, and correct malfunctions in the network as quickly as possible. There are various kinds of tools dealing with network monitoring and analysis, such as tools used by Simple Network Management Protocol (SNMP), Windows Management Instrumentation (WMI), Sniffers, and Network flow monitoring and analysis. Given the data packet and network traffic flow information, administrators can understand network behavior, such as application and network usage, utilization of network resources, and network anomalies and security vulnerabilities.
+Configuring Event Sources (s-flow, NetFlow, sniffer)
+
+Network monitoring and measurement have become more and more important in the modern network. In the past, administrators might only monitor a few network devices or less than a hundred computers. The network bandwidth may have been just 10 or 100 Mbps; however, now administrators have to deal with not only higher speed wired network (10 Gbps and above) but also wireless networks. They need more sophisticated network traffic monitoring and analysis tools in order to maintain network system stability and availability, allowing them to fix network problems in real time, to avoid network failure, to ensure the network security strength, and to make good decisions for network planning.
+
+When a network failure occurs, monitoring agents have to detect, isolate, and correct malfunctions in the network as quickly as possible. There are various kinds of tools dealing with network monitoring and analysis, such as tools used by Simple Network Management Protocol (SNMP), Windows Management Instrumentation (WMI), Sniffers, and Network flow monitoring and analysis. Given the data packet and network traffic flow information, administrators can understand network behavior, such as application and network usage, utilization of network resources, and network anomalies and security vulnerabilities.
+Cisco NetFlow
+
+NetFlow is an embedded instrumentation within Cisco IOS Software to characterize network operation. Visibility into the network is an indispensable tool for IT professionals. In response to new requirements and pressures, network operators are finding it critical to understand how the network is behaving, including:
+
+■■ Application and network usage
+
+■■ Network productivity and utilization of network resources
+
+■■ The impact of changes to the network
+
+■■ Network anomaly and security vulnerabilities
+
+■■ Long-term compliance issues
+
+Cisco IOS NetFlow fulfills those needs, creating an environment where administrators have the tools to understand who, what, when, where, and how network traffic is flowing. When the network behavior is understood, business process will improve and an audit trail of how the network is utilized is available. NetFlow facilitates solutions to many common problems encountered by IT professionals, including:
+
+■■ Analyze new applications and their network impact
+
+■■ Identify new application network loads such as VoIP or remote site additions
+
+■■ Reduction in peak WAN traffic
+
+■■ Use NetFlow statistics to measure WAN traffic improvement from application-policy changes; understand who is utilizing the network and the network top talkers
+
+■■ Troubleshooting and understanding network pain points
+
+■■ Diagnose slow network performance, bandwidth hogs, and bandwidth utilization quickly with command line interface or reporting tools
+
+■■ Detection of unauthorized WAN traffic
+
+■■ Avoid costly upgrades by identifying the applications causing congestion
+
+■■ Security and anomaly detection
+
+■■ Validation of QoS parameters
+
+■■ Confirm that appropriate bandwidth has been allocated to each Class of Service (CoS) and that no CoS is over- or under-subscribed
+What is an IP Flow?
+
+Each packet that is forwarded within a router or switch is examined for a set of IP packet attributes. These attributes are the IP packet identity or fingerprint of the packet and determine if the packet is unique or similar to other packets.
+
+IP Packet Attributes
+
+Traditionally, an IP Flow is based on a set of five and up to seven IP packet attributes.
+
+IP Packet attributes used by NetFlow:
+
+■■ IP source address
+
+■■ IP destination address
+
+■■ Source port
+
+■■ Destination port
+
+■■ Layer 3 protocol type
+
+■■ Class of service
+
+■■ Router or switch interface
+
+All packets with the same source/destination IP address, source/destination ports, protocol interface, and class of service are grouped into a flow and then packets and bytes are tallied. This methodology of fingerprinting or determining a flow is scalable because a large amount of network information is condensed into a database of NetFlow information called the NetFlow cache.
+Understanding Network Behavior
+
+This flow information is extremely useful for understanding network behavior:
+
+■■ Source address allows the understanding of who is originating the traffic
+
+■■ Destination address tells who is receiving the traffic
+
+■■ Ports characterize the application utilizing the traffic
+
+■■ Class of service examines the priority of the traffic
+
+■■ The device interface tells how traffic is being utilized by the network device
+
+■■ Tallied packets and bytes show the amount of traffic
+
+■■ Additional information added to a flow includes:
+
+■■ Flow timestamps to understand the life of a flow; timestamps are useful for calculating packets and bytes per second
+
+■■ Next hop IP addresses, including BGP routing Autonomous Systems (AS)
+
+■■ Subnet mask for the source and destination addresses to calculate prefixes
+
+■■ TCP flags to examine TCP handshakes
+How to Access the Data Produced by NetFlow
+
+There are two primary methods to access NetFlow data:
+
+■■ The Command Line Interface (CLI) with show commands
+
+■■ Utilizing an application reporting tool
+
+If you are interested in an immediate view of what is happening in your network, the CLI can be used. NetFlow CLI is very useful for troubleshooting. The other choice is to export NetFlow to a reporting server or what is called the “NetFlow collector.”
+
+The NetFlow collector has the job of assembling and understanding the exported flows and combining or aggregating them to produce the valuable reports used for traffic and security analysis. NetFlow export, unlike SNMP polling, pushes information periodically to the NetFlow reporting collector. In general, the NetFlow cache is constantly filling with flows, and software in the router or switch is searching the cache for flows that have terminated or expired, and these flows are exported to the NetFlow collector server. Flows are terminated when the network communication has ended (i.e., a packet contains the TCP FIN flag).
+
+The following steps are used to implement NetFlow data reporting:
+
+■■ NetFlow is configured to capture flows to the NetFlow cache
+
+■■ NetFlow export is configured to send flows to the collector
+
+■■ The NetFlow cache is searched for flows that have terminated and these are exported to the NetFlow collector server
+
+■■ Approximately 30 to 50 flows are bundled together and typically transported in UDP format to the NetFlow collector server
+
+■■ The NetFlow collector software creates real-time or historical reports from the data
+How Does the Router or Switch Determine Which Flows to Export to the NetFlow Collector Server?
+
+A flow is ready for export when it is inactive for a certain time (i.e., no new packets received for the flow) or if the flow is long lived (active) and lasts greater than the active timer (i.e., long FTP download). Also, the flow is ready for export when a TCP flag indicates the flow is terminated (i.e., FIN, RST flag). There are timers to determine if a flow is inactive or if a flow is long lived; the default for the inactive flow timer is 15 seconds, and the active flow timer is 30 minutes. All the timers for export are configurable, but the defaults are used in most cases except on the Cisco Catalyst 6500 Series Switch platform. The collector can combine flows and aggregate traffic. For example, an FTP download that lasts longer than the active timer may be broken into multiple flows and the collector can combine these flows showing total FTP traffic to a server at a specific time of day.
+Format of the Export Data
+
+There are various formats for the export packet, and these are commonly called the export version. The export versions are well-documented formats, including version 5, 7, and 9. The most common format used is NetFlow export version 5, but version 9 is the latest format and has some advantages for key technologies such as security, traffic analysis, and multicast.
+sFlow
+
+sFlow, short for “sampled flow,” is an industry standard for packet export at Layer 2 of the OSI model. It provides a means for exporting truncated packets, together with interface counters. Maintenance of the protocol is performed by the sFlow. org consortium, the authoritative source of the sFlow protocol specifications.
+
+sFlow is a technology for monitoring traffic in data networks containing switches and routers. It is described in RFC 3176. In particular, it defines the sampling mechanisms implemented in an sFlow Agent for monitoring traffic, the sFlow MIB for controlling the sFlow Agent, and the format of sample data used by the sFlow Agent when forwarding data to a central data collector.
+
+The architecture and sampling techniques used in the sFlow monitoring system are designed to provide continuous site-wide (and network-wide) traffic monitoring for high-speed switched and routed networks.
+
+The design specifically addresses issues associated with:
+
+■■ Accurately monitoring network traffic at Gigabit speeds and higher
+
+■■ Scaling to manage tens of thousands of agents from a single point
+
+■■ Extremely low-cost agent implementation
+
+The sFlow monitoring system consists of an sFlow Agent (embedded in a switch or router or in a stand-alone probe) and a central data collector, or sFlow Analyzer. The sFlow Agent uses sampling technology to capture traffic statistics from the device it is monitoring. sFlow Datagrams are used to immediately forward the sampled traffic statistics to an sFlow Analyzer for analysis.
+Event Correlation Systems (Security, Information, and Event Management (SIEM))
+
+SIEM technology is used in many enterprise organizations to provide real-time reporting and long-term analysis of security events. SIEM products evolved from two previously distinct product categories, namely security information management (SIM) and security event management (SEM).
+
+■■ Security event management (SEM): Analyzes log and event data in real time to provide threat monitoring, event correlation, and incident response. Data can be collected from security and network devices, systems, and applications.
+
+■■ Security information management (SIM): Collects, analyzes, and reports on log data (primarily from host systems and applications, but also from network and security devices) to support regulatory compliance initiatives, internal threat management, and security policy compliance management.
+SIEM Functions
+
+SIEM combines the essential functions of SIM and SEM products to provide a comprehensive view of the enterprise network using the following functions:
+
+■■ Log collection of event records from sources throughout the organization provides important forensic tools and helps to address compliance reporting requirements
+
+■■ Normalization maps log messages from different systems into a common data model, enabling the organization to connect and analyze related events, even if they are initially logged in different source formats
+
+■■ Correlation links logs and events from disparate systems or applications, speeding detection of and reaction to security threats
+
+■■ Aggregation reduces the volume of event data by consolidating duplicate event records
+
+■■ Reporting presents the correlated, aggregated event data in real-time monitoring and long-term summaries
+
+The SIEM market is evolving toward integration with business management tools, internal fraud detection, geographical user activity monitoring, content monitoring, and business critical application monitoring. SIEM systems are implemented for compliance reporting, enhanced analytics, forensic discovery, automated risk assessment, and threat mitigation.

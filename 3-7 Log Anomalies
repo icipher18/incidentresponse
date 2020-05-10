@@ -1,0 +1,28 @@
+Log Anomalies
+
+A log anomaly is anything out of the ordinary. Identifying log anomalies is often the first step in identifying security-related issues both during an audit and during routine monitoring.
+
+Some anomalies will be glaringly obvious. For example: gaps in date/time stamps, or account lockouts. Others will be harder to detect, such as someone trying to write data to a protected directory. While it would seem logging everything so that you would not miss any important data is the best approach, most would soon drown under the amount of data collected.
+Log Management
+
+Log files can grow beyond the organization’s means to gather meaningful data from them if they are not managed properly. How can the organization ensure they are getting the data needed without overburdening the organization’s resources with excessive log events?
+
+■■ Start with the organization’s most critical resources
+
+■■ Be selective in the amount of data received from each host
+
+■■ Get the data somewhere easily accessible for analysis
+Clipping Levels
+
+Clipping levels are a predefined criteria or threshold that sets off an event entry. For example, a security operations center does not want to be notified on every failed login attempt, because everyone mistypes their password occasionally. Thus, set the clipping level to only create a log entry after two failed password attempts.
+Clipping levels usually have a time property associated with them. For the logging process to not have to keep track of every single failed password attempt in the off chance that the next time that account is logged in the password is mistyped, set the time limit to a reasonable amount of time; for example, 30 minutes. Now the system only has to keep track of an invalid login attempt on a particular account for 30 minutes. If another invalid attempt does not come in on that account, the system can disregard the first one. Clipping levels are great for reducing the amount of data accumulating in log files. Care must be taken to ensure important data is not skipped, and like everything else, the clipping levels need to be documented and protected, as an attacker would gain an advantage knowing them.
+Filtering
+
+Log filtering usually takes place after the log files have been written. Clipping reduces the amount of data in the log; filtering reduces the amount of data viewed. Filters come in extremely handy when trying to isolate a particular host, user account, or event type.
+
+For example, you could filter a log file to only look at invalid login attempts, or for all entries within a certain time window. Care must be taken when filtering that you do not filter out too much information and miss what you are looking for.
+Log Consolidation
+
+Log consolidation gives “one-stop shopping” for log file analysis. Log file consolidation is usually done on a separate server from the one that actually generates the log files.
+
+These servers are called Security Information and Event Management (SIEM) systems. Most systems have the ability to forward log messages to another server. Thus, the entry not only appears in the log file of the server, but it also appears in the consolidated log on the “SIEM.” Log consolidation is extremely useful when you are trying to track a user or event that reaches across multiple servers or devices. Log consolidation is discussed further below in the centralized versus distributed log management section.

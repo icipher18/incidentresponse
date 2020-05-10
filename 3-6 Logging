@@ -1,0 +1,25 @@
+Logging
+
+Log files can be cumbersome and unwieldy. They can also contain critical information within them that can document compliance with an organization’s security framework. The organization’s security framework should have the policies and procedures to cover log files, namely, they need to spell out:
+
+■■ What devices and hosts might contain critical log data
+
+■■ What information gets logged
+
+■■ Where and how the log files are going to be stored
+
+■■ Retention schedule for log files
+
+■■ What security measures are going to be employed to ensure the integrity of the log files in storage and in transit
+
+■■ Who has access to modify or delete log files
+Reviewing Host Logs
+
+Auditors are going to want to review host logs as part of the audit process. Review host log files regularly as part of your organization’s security program. As part of the organization’s log processes, guidelines must be established for log retention and followed. If the organizational policy states to retain standard log files for only six months; that is all the organization should have. During normal log reviews, it is acceptable to use live log files as long as the review does not disrupt the normal logging process.
+Reviewing Incident Logs
+
+Any time an incident occurs, save the log files of all devices that have been affected or are along the network path the intruder took. These files need to be saved differently than your standard log retention policy. Since it is possible that these log files might be used in a court case against the intruder, follow sound forensic chain of custody principles when obtaining and preserving the logs.
+
+Document who saved the files, where they were saved, and who has access to them. The data retention rules might change for potential legal evidence, so ensure that the organization’s legal department has determined how long to retain incident logs.
+
+During an audit, auditors might want to review these files both to check on the organization’s incident response policy and to identify any trends in the intrusions.

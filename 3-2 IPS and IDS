@@ -1,0 +1,22 @@
+Intrusion Detection System (IDS)/Intrusion Prevention System (IPS)
+
+Intrusion detection refers to detection of malicious activity (break-ins, penetrations, and other forms of computer abuse) in a computer related system. These malicious activities or intrusions are interesting from a computer security perspective.
+
+An intrusion is different from the normal behavior of the system, and hence anomaly detection techniques are applicable for intrusion detection. The key challenge for anomaly detection systems is the huge volume of data that they need to correlate. The anomaly detection techniques need to be computationally efficient to handle these large-sized inputs. Moreover, the data typically come in a streaming fashion, thereby requiring on-line analysis. Another issue that arises because of the large-sized input is the false alarm rate.
+Comparing IDS and IPS
+
+IDS is a passive system that detects security events but has limited ability to intervene on the event. Intrusion prevention is the process of performing intrusion detection and attempting to stop detected possible incidents. IPS are primarily focused on identifying possible incidents, logging information about them, attempting to stop them, and reporting them to security administrators.
+Types of IDS/IPS Devices
+
+■■ Network-based IDS (NIDS) generally connects to one or more network segments. It monitors and interprets traffic and identifies security events by anomaly detection or based on the signature of the event
+
+■■ Host-based IDS (HIDS) usually resides as a software agent on the host
+Deploying HIDS and NIDS
+
+Business data flow diagrams and data classification policies are a good starting point. HIDS and NIDS need to be deployed where they can best protect critical organizational assets. Of course, in a perfect world with unlimited budget, all devices would be protected by HIDS and NIDS, but most IT security staff has to deal with limited personnel and limited budget.
+
+Protect critical assets first and protect the most possible with the fewest devices. A good starting point would be to place HIDS on all systems that contain financial data, HR data, PII, research and any other data for which protection is mandated.
+
+NIDS should be placed on all ingress points into your network and on segments separating critical servers from the rest of the network. There used to be some debate as to whether NIDS should be placed outside your firewall to identify all attacks against your network or inside your firewall to identify only those that made it past your firewall rules. The general practice now appears to be to not worry if it is raining outside; only worry about what is dripping in your living room. In other words, keep the NIDS inside the firewall.
+
+Both HIDS and NIDS are notoriously noisy out of the box and should be tuned for specific environments. They also need to be configured to notify the responsible people via the approved method if they identify a potential incident. These, like the alerts themselves, must be configured properly to ensure that when something really does happen, the designated people know to take action. For the most part, low-priority events can send alerts via e-mail, while high priority events should page, or call, the security personnel on call.
