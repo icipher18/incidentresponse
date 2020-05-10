@@ -1,0 +1,54 @@
+Potential Security Issues
+
+■■ Wireless-enabled devices (e.g., laptops) can associate with wireless access points or other wireless devices to form a bridged connection to the wired network
+
+■■ Without some form of authentication, rogue devices can attach to the wireless network
+
+■■ Without some form of encryption, data transferring between the wired and the wireless network can be captured
+
+With this information, a security tester can test for the effectiveness of wireless security in the environment using specialized tools and techniques as presented here.
+Searching for Rogue Access Points
+
+The following techniques can be used to search for rogue (unauthorized) access points:
+
+■■ Use a network vulnerability scanner with signatures that specifically scan for MAC addresses (of the wired port) of vendors that produce AP units, and then attempt to connect to that interface on an HTTP port. If the unit responds, analyze the web code to determine if it is a web page related to the management of the AP device. This requires periodic scanning and will leave the server vulnerable until the next scan.
+
+■■ Use a laptop or handheld unit loaded with software that analyzes 802.11x radio frequency (RF) transmissions for SSIDs and WAP wired side MAC addresses that do not belong to the company or are not authorized. Make sure discovery tools pick up all bands and 802.11x types; that is, if you only test for 802.11b, you may miss rogue 802.11a units. This requires periodic scanning by physically walking through the organization’s grounds and will leave the organization vulnerable until the next scan.
+
+■■ Up-and-coming solutions allow for authorized APs and wireless clients to detect unauthorized RF transmissions and “squeal” on the rogue access point. This information can be used to automatically disable an infrastructure switch port to which a rogue has connected.
+Locking Down the Enterprise
+
+To lock down the enterprise from the possibility of rogue APs, you can:
+
+■■ Enable MAC address filtering on the infrastructure switches. This technique matches each port to a known MAC address. If someone plugs in an unapproved MAC to a switch port expecting another MAC address, the AP will never be able to join the network from the wired side unless it has its MAC changed.
+
+To gauge security effectiveness of authorized APs:
+
+■■ Discover authorized APs using the tools described herein and ensure they require encryption
+
+■■ Ensure discovered APs meet other policy requirements such as the type of authentication (802.1x or other), SSID naming structure, and MAC address filtering
+
+■■ Ensure APs have appropriate layer 2 Ethernet type filters, layer 3 protocol filters, and layer 4 port filters (to match the organization’s configuration procedures) so that untrusted wireless traffic coming into the AP is limited to only that which is needed and required
+Wireless Tools
+
+■■ Netstumbler: Windows software that detects 802.11b information through RF detection, including SSID, whether communication is encrypted, and signal strength.
+
+■■ Kismet: Linux software that detects 802.11b and 802.11a information through RF detection, including SSID, whether communication is encrypted, and signal strength. It features the ability to rewrite MAC address on select wireless cards.
+
+■■ Wellenreiter: Linux software that detects wireless networks. It runs on Linux-based handheld PDA computers.
+
+■■ Nessus: Linux software for vulnerability assessment that includes 30 plus signatures to detect WAP units.
+
+■■ Aircrack-NG: Aircrack-NG is an 802.11 WEP and WPA-PSK keys cracking program that can recover keys once enough data packets have been captured. It implements the standard FMS attack along with some optimizations, such as KoreK attacks, as well as the PTW attack, thus making the attack much faster compared with other WEP cracking tools. In fact, Aircrack-NG is a set of tools for auditing wireless networks.
+War Dialing
+
+War dialing attempts to locate unauthorized, also called rogue, modems connected to computers that are connected to networks. Attackers use tools to sequentially and automatically dial large blocks of numbers used by the organization in the hopes that rogue modems or modems used for out-of-band communication will answer and allow them to make a remote asynchronous connection to it.
+
+With weak or nonexistent authentication, these rogue modems may serve as a back door into the heart of a network, especially when connected to computers that host remote control applications with lax security. Security testers can use war dialing techniques as a preventative measure and attempt to discover these modems for subsequent elimination. Although modems and war dialing have fallen out of favor in the IT world, you still need to check for the presence of unauthorized modems connected to their network.
+War Driving
+
+War driving is the wireless equivalent of war dialing. While war dialing involves checking banks of numbers for a modem, war driving involves traveling around with a wireless scanner looking for wireless access points.
+
+Netstumbler was one of the original products that people used for war driving. From the attacker perspective, war driving gives the attacker a laundry list of access points where he/she can attach to a network and perform attacks.
+
+The best ones in a hacker’s eye are the unsecured wireless access points that allow unrestricted access to the corporate network. The hacker will not only compromise the corporate network, but will then use the corporate Internet access to launch attacks at other targets that are then untraceable back to the hacker. From a security standpoint, war driving enables you to detect rogue access points in and around the physical locations. Is an unsecured wireless access point that is NOT on the network a security threat to the network? It certainly is. If a user can connect his/her workstation to an unknown and unsecured network, the user introduces a threat to the security of the network.

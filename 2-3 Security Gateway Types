@@ -1,0 +1,16 @@
+Security Gateway Types
+
+■■ Antivirus gateways: These systems monitor for viruses contained within communications of major application types, such as web traffic, e-mail, and FTP
+
+■■ Java/ActiveX filters: These systems screen communications for these components and block or limit their transmission
+
+■■ Web traffic screening: These systems block web traffic to and from specific sites or sites of a specific type (gambling, pornography, games, travel and leisure, etc.)
+
+Security testing should encompass these gateway devices to ensure their proper operation. Depending on the device, the easiest way to test to ensure that it is working is try to perform the behavior that it is supposed to block. There are “standard” AV test files available on the Internet that do not contain a virus but have a signature that will be discovered by all major AV vendors. While this file will not ensure that the organization’s AV will catch everything, it will at least confirm that the gateway is looking into the traffic for virus patterns.
+Wireless Networking Testing
+
+With the proliferation of wireless access devices comes the common situation where they are not configured for even minimal authentication and encryption because the people deploying them generally have no knowledge of the ramifications. Therefore, periodic wireless testing to spot unofficial access points is needed.
+
+Adding 802.11based wireless access points (AP) to networks increases overall convenience for users, mostly because of the new mobility that is possible. Whether using handheld wireless PDA devices, laptop computers, or the newly emerging wireless voice over IP telephones, users are now able to flexibly collaborate outside of the office confines — ordinarily within the building and within range of an AP — while still remaining connected to network-based resources. To enable wireless access, an inexpensive wireless access point can be procured and plugged into the network. Communication takes place from the unwired device to the AP. The AP serves (usually) as a bridge to the wired network.
+
+The problem with this from a security perspective is that allowing the addition of one or more AP units onto the network infrastructure will likely open a large security hole. Therefore, no matter how secure the organization’s wired network is, when the even one AP with no configured security is added, basic security, or even what seems to be high security, this is similar to adding a network connection in the organization’s parking lot allowing anyone with the right tools and motivation access to the internal network. The implication here is that many APs as originally implemented in the 802.11b/g/n standard have easily breakable security. Security testers should have methods to detect rogue APs that have been added by employees or unauthorized persons. By doing so, these wireless security holes can be examined.

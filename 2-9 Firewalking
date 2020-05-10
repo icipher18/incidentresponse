@@ -1,0 +1,23 @@
+Firewalking
+
+Another technique for mapping a network is commonly known as “firewalking,” which uses traceroute techniques to discover which services a filtering device such as a router or firewall will allow through. These tools generally function by transmitting TCP and/or UDP packets on a particular port with a time to live (TTL) equal to at least one greater than the targeted router or firewall. If the target allows the traffic, it will forward the packets to the next hop. At that point, the traffic will expire as it reaches the next hop and an ICMP_TIME_EXCEEDED message will be generated and sent back out of the gateway to the test host. If the target router or firewall does not allow the traffic, it will drop the packets and the test host will not see a response.
+Basic Built-in Tools
+
+By all means, do not forget about the use of basic built-in operating system commands for discovering hosts and routes. Basic built-in and other tools include:
+
+■■ Traceroute (Windows calls this tracert): Uses ICMP or TCP depending on the implementation of a path to a host or network.
+
+■■ Ping: See if a host is alive using ICMP echo request messages.
+
+■■ Telnet: Telnetting to a particular port is a quick way to find out if the host is servicing that port in some way.
+
+■■ Whois: Command line Whois can provide similar information to the webbased Whois methods previously discussed.
+
+■■ System Fingerprinting: System fingerprinting refers to testing techniques used by port scanners and vulnerability analysis software that attempt to identify the operating system in use on a network device and the versions of services running on the host. Why is it important to identify a system? By doing so, you know what you are dealing with and later on, what vulnerabilities are likely for that system. As mentioned previously, Microsoft-centric vulnerabilities are (usually) not going to show up on Sun systems and vice versa. Web repositories for vulnerabilities are extremely useful. Websites such as shodan (www.shodanhq.com) actively compile vulnerable online devices in a searchable format. Additionally, organizations such as NIST compile centralized vulnerability databases such as the National Vulnerability Database.
+Phase 3: Information Evaluation and Risk Analysis
+
+Before active penetration, evaluate the findings and perform risk analysis on the results to determine which hosts or services the security assessor is going to try and actively penetrate. You should not perform an active penetration on every host until the organization has fully completed Phase 2.
+
+You must also identify the potential business risks associated with performing a penetration test against particular hosts. You can and probably will interrupt normal business processes if you perform a penetration test on a production system.
+
+The business leaders need to be made aware of that fact, and they need to be involved in making the decision on which devices to actively penetrate.

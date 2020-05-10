@@ -1,0 +1,63 @@
+Phase 4: Active Penetration
+
+This bears repeating. Think twice before attempting to exploit a possible vulnerability that may harm the system. For instance, if the system might be susceptible to a buffer overflow attack, it might be enough to identify the vulnerability without actually exploiting it and bringing down the system. Weigh the benefits of succinctly identifying vulnerabilities against potentially crashing the system.
+
+Here are some samples:
+
+■■ Vulnerability testing shows that a web server may be vulnerable to crashing if it is issued a very long request with dots (i.e., ../../../../../../../../../ 1000 times). You can either try to actually crash the server using the technique (although this may have productivity loss consequences) or alternatively and perhaps for the better they can note it for further investigation, perhaps on a test server. Make sure permission is explicitly granted before attempting this type of actual exploitation.
+
+■■ Vulnerability testing shows that a UNIX host has a root account with the password set to root. You can easily test this find to determine whether this is a false positive.
+
+■■ Vulnerability testing shows that a router may be susceptible to an SSH attack.
+Phase 5: Analysis and Reporting
+
+As with any security testing, documentation of the test, analysis of the results, and reporting those results to the proper managers are imperative. Many different methods can be utilized when reporting the results of a vulnerability scan. A comprehensive report will have separate sections for each management/ technical level involved in the test. An overview of the results with a summary of the findings might be ideal for management, while a technical review of specific findings with remediation recommendations would be appropriate for the device administrators. As with any report that outlines issues, it is always best to offer solutions for fixing the issues as well as reporting their existence.
+Penetration Testing High-Level Steps
+
+The following outline provides a high-level view of the steps that could be taken to exploit systems during a penetration test. It is similar in nature to a vulnerability test but goes further to perform an exploit.
+
+1. Obtain a network address (usually center on internal testing when you are physically onsite): With the advent DHCP on the network, a tester can often plug in and get an IP address right away. DHCP assigned addresses usually come with gateway and name server addresses. If the tester does not get a DHCP address, the system may be setup for static addresses. You can sniff the network for communications that detail the segment you are on and guess at an unused address.
+
+2. Reconnaissance
+
+■■ Verify target information
+
+■■ DNS information obtained via DHCP
+
+■■ DNS zone transfer when allowed by the server
+
+■■Whois
+
+■■ Browsing an internal domain
+
+■■ Using Windows utilities to enumerate servers
+
+■■ Pings sweeps
+
+■■ Traceroute
+
+■■ Port scans (TCP connect, SYN scans, etc.)
+
+■■ OS fingerprinting
+
+■■ Banner grabbing
+
+■■ Unix RPC discovery
+
+3. Target vulnerability analysis and enumeration Using techniques that are less likely to be logged or reported in an IDS system (i.e., less “noisy” techniques), evaluate the vulnerability of ports on a target.
+
+■■ For Windows systems, gather user, group, and system information with NULL sessions (NT), “net” commands, nltest utility
+
+■■ For UNIX systems, gather RPC information
+
+4. Exploitation: Identify and exploit the vulnerabilities:
+
+■■ Buffer overflows
+
+■■ Brute force
+
+■■ Password cracking
+
+■■ Vulnerability chaining
+
+■■ Data access

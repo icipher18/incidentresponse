@@ -1,0 +1,43 @@
+DNS Zone Transfers
+
+In an effort to discover the names and types of servers operating inside or outside a network, attackers may attempt zone transfers from DNS servers. A zone transfer is a special type of query directed at a DNS server that asks the server for the entire contents of its zone (the domain that it serves). Information that is derived is only useful if the DNS server is authoritative for that domain. To find a DNS server authoritative for a domain, Whois search results often provide this information. Internet DNS servers will often restrict which servers are allowed to perform transfers, but internal DNS servers usually do not have these restrictions.
+
+Secure systems should lock down DNS. Testers should see how the target does this by keeping the following in mind:
+
+■■ Attackers will attempt zone transfers; therefore, configure DNSs to restrict zone transfers to only approved hosts.
+
+■■ Attackers will look for host names that may give out additional information — accountingserver.bigfinancialcompany.com.
+
+■■ Avoid using Host Information Records (HINFO) when possible. HINFO is the Host Information Record of a DNS entry. It is strictly informational in nature and serves no function. It is often used to declare the computer type and operating system of a host.
+
+■■ Use a split DNS model with internal DNS and external DNS servers. Combining internal and external functions on one server is potentially dangerous. Internal DNS will serve the internal network and can relay externally bound queries to the external DNS servers that will do the lookup work by proxy. Incoming Internet-based queries will only reveal external hosts because the external hosts only know these addresses.
+
+There are varieties of free programs available that will resolve DNS names, attempt zone transfers, and perform a reverse lookup of a specified range of IPs. Major operating systems also include the “nslookup” program, which can also perform these operations.
+
+-->	Network Mapping
+
+Network mapping is a process that “paints the picture” of which hosts are up and running externally or internally and what services are available on the system. Commonly, you may see mapping in the context of external host testing and enumeration in the context of internal host testing, but this is not necessarily ironclad, and mapping and enumeration often seem to be used interchangeably. They essentially accomplish similar goals, and the terms can be used in similar ways.
+
+When performing mapping of any kind, the tester should limit the mapping to the scope of the project. Testers may be given a range of IP addresses to map, so the testers should limit the query to that range.
+
+Overt and covert testing usually includes network mapping, which is the activity that involves techniques to discover the following:
+
+■■ Which hosts are up and running or “alive”?
+
+■■ What is the general topology of the network (how are things interconnected)?
+
+■■ What ports are open and serviceable on those hosts?
+
+■■ What applications are servicing those ports?
+
+■■ What operating system is the host running?
+
+Mapping is the precursor to vulnerability testing and usually defines what will be tested more deeply at that next stage. For example, consider a scenario where you discover that a host is listening on TCP port 143. This probably indicates the host is running application services for the IMAP mail service. Many IMAP implementations have vulnerabilities. During the network mapping phase, you learn that host 10.1.2.8 is listening on this port, but you tend not to learn which IMAP implementation it is. IMAP vendor X may have an ironclad implementation, whereas IMAP vendor Z’s system may be full of bugs and vulnerabilities. Network mapping may provide insight about the operating system the host is running, which may in turn narrow the possible IMAP applications. For example, it is unlikely that the Microsoft Exchange 2000 IMAP process will be running on a Solaris computer; therefore, if network mapping shows a host with telltale Solaris “fingerprints” as well as indications that the host is listening on TCP port 143, the IMAP server is probably not MS Exchange. As such, when you are later exploring vulnerabilities, they can likely eliminate Exchange IMAP vulnerabilities for this host.
+
+Mapping results can be compared to security policy to discover rogue or unauthorized services that appear to be running. For example, an organization may periodically run mapping routines to match results with what should be expected. If more services are running than one would expect to be running, the systems may have been accidentally misconfigured (therefore opening up a service not approved in the security policy) or the host(s) may have been compromised.
+
+When performing mapping, make sure you are performing the mapping on a host range owned by the organization. For example, suppose an nslookup DNS domain transfer for bobs-italianbookstore.com showed a mail server at 10.2.3.70 and a web server at 10.19.40.2. Assuming you do not work for bobs-italianbookstore. com and do not have intimate knowledge of their systems, you might assume that they have two Internet connections.
+
+In a cooperative test, the best course of action is to check with their administrative staff for clarification. They may tell you that the mail is hosted by another company and that it is outside of the scope of the test. However, the web server is a host to be tested. You should ask which part of the 10.0.0.0 bobsbookstore.com controls. Let us assume they control the class-C 10.19.40.0. Therefore, network mapping of 10.19.40.1 through 10.19.40.254 is appropriate and will not interfere with anyone else’s operations. Even though only one host is listed in the DNS, there may be other hosts up and running.
+
+Depending on the level of stealth required (i.e., to avoid detection by IDS systems or other systems that will “notice” suspected activity if a threshold for certain types of communication is exceeded), network mapping may be performed very slowly over long periods of time. Stealth may be required for covert penetration tests.
