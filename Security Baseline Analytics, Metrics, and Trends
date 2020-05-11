@@ -1,0 +1,32 @@
+Security Analytics, Metrics, and Trends
+
+Effective network security demands an integrated defense-in-depth approach. The first layer of a defense-in-depth approach is the enforcement of the fundamental elements of network security. These fundamental security elements form a security baseline, creating a strong foundation on which more advanced methods and techniques can subsequently be built.
+Security Baseline
+
+A Security Baseline defines a set of basic security objectives that must be met by any given service or system. The objectives are chosen to be pragmatic and complete, and do not impose technical means. Therefore, details on how these security objectives are fulfilled by a particular service/system must be documented in a separate Security Implementation Document. These details depend on the operational environment a service/system is deployed into, and might, thus, creatively use and apply any relevant security measure. Derogations from the baseline are possible and expected, and must be explicitly marked.
+Network Security Baseline
+
+Developing and deploying a security baseline can, however, be challenging due to the vast range of features available. For instance, a Network Security Baseline is designed to assist in this endeavor by outlining those key security elements that should be addressed in the first phase of implementing defense-in-depth. The main focus of a Network Security Baseline is to secure the network infrastructure itself: the control and management planes. The Network Security Baseline presents the fundamental network security elements that are key to developing a strong network security baseline.
+
+The focus is primarily on securing the network infrastructure itself, as well as critical network services, and addresses the following key areas of baseline security:
+
+■■ Infrastructure Device Access
+
+■■ Routing Infrastructure
+
+■■ Device Resiliency and Survivability
+
+■■ Network Telemetry
+
+■■ Network Policy Enforcement
+
+■■ Switching Infrastructure
+
+Unless these baseline security elements are addressed, additional security technologies and features are typically useless. For example, if a default access account and password are active on a network infrastructure device, it is not necessary to mount a sophisticated attack since attackers can simply log in to the device and perform whatever actions they choose.
+Metrics and Analysis (MA)
+
+The use of metrics and analysis (MA) is a sophisticated practice in security management that takes advantage of data to produce usable, objective information and insights that guide decisions.
+
+Analytics is the discovery and communication of meaningful patterns in data. Especially valuable in areas rich with recorded information, analytics relies on the simultaneous application of statistic, computer programming, and operations research to quantify performance. Risk Analytics involves reporting on metrics from various areas that point out which businesses, processes, or systems are most at risk and require immediate attention.
+
+Through MA, a CSO or other security professional can better understand risks and losses, discern trends, and manage performance. Software designed specifically for the security field can make the gathering of security and risk significant data orderly, convenient, and accurate, while holding the data in a format that facilitates analysis. Security and risk-focused incident management software offers both the standardization and consolidation of data. Such software also automates the task of analysis through trending and predictive analysis and the generation of customized statistical reports.
