@@ -1,0 +1,45 @@
+Incident Records
+
+According to NIST SP 800-61 Rev2, the records should minimally contain:
+
+■■ The current status of the incident (new, in progress, forwarded for investigation, resolved, etc.)
+
+■■ Summary of the incident
+
+■■ Indicators related to the incident
+
+■■ Other incidents related to this incident
+
+■■ Actions taken by all incident handlers on this incident
+
+■■ Chain of custody, if applicable
+
+■■ Impact assessments related to the incident
+
+■■ Contact information for other involved parties (e.g., system owners, system administrators)
+
+■■ A list of evidence gathered during the incident investigation
+
+■■ Comments from incident handlers
+
+■■ Next steps to be taken (e.g., rebuild the host, upgrade an application)
+Assessing Risk
+
+The next step in the analysis is to determine the risk of the incident. Not all incidents warrant immediate action, and not all incidents warrant a notification. The incident response team must work with relevant stakeholders such as the information system owner, the information owner, the CISO, the CIO, and legal counsel to determine the impact of a breach. If a breach involves personally identifiable information (PII), notifications may need to be sent out. Incident risk is often reported as high, moderate, or low.
+Response
+
+When an incident is detected, a containment strategy must be decided. Containment may include disconnecting devices from the network, shutting systems down, or redirecting traffic around an affected area of the network.
+Containment Strategy Considerations
+
+The containment strategy should be driven by several criteria, including the:
+
+■■ Need to preserve forensic evidence for possible legal action
+
+■■ Availability of services the affected component provides
+
+■■ Potential damage leaving the affected component in place may cause
+
+■■ Time required for the containment strategy to be effective
+
+■■ Resources required to contain the affected component
+

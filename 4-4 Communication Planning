@@ -1,0 +1,32 @@
+Communication Planning
+
+Communication planning is an essential part of incident response planning. During an incident, the public, news media, government, and business partners may all be in need of accurate, thorough, and timely updates. Be aware of how you fit into the communications process. As NIST points out in SP 800-61 Rev2, the following image describes a typical communications web for an organization’s incident response plan.
+
+The whole domain of public relations and communications is an extremely sensitive issue at the best of times. When an event becomes an incident, the proper handling of public disclosure can either compound the negative impact or, if handled correctly, provide an opportunity to engender public trust in the organization. This is why communications, human resources, and only properly trained and authorized individuals should handle the communications and external notifications.
+
+In some countries or jurisdictions, legislation exists (or is being contemplated) that requires organizations to publicly disclose when they reasonably believe there has been an incident that may have jeopardized someone’s private or financial information. Obviously, denial and “no comment” are not an effective public relations strategy in today’s information culture.
+Communication with Law Enforcement
+
+Law enforcement reporting will vary by country, state, economy, and jurisdiction, but in general, be aware of the drivers that may necessitate law enforcement involvement.
+
+Many criminal actions that started as incidents are often not prosecuted because law enforcement was not involved early enough in the process or the incident response team damaged evidence.
+
+In the United States the Federal Bureau of Investigation, state and local law enforcement and the district attorney offices may be involved in an incident. U.S. federal agencies also have the Office of Inspector General that is responsible for investigating fraud, waste, and abuse. Regardless of location, the incident response team should become familiar with relevant law enforcement agencies and know who the contacts are ahead of an incident.
+
+In developing relationship with law enforcement agencies, it is important that the incident response team understands under what conditions the law enforcement agency should be contacted, how the contact should occur, what evidence if any the incident response team should collect, and any standards or processes around collections. The organization’s forensics policy, standards, and procedures should contain requirements as noted by the law enforcement partner. The organization must be collectively exhaustive and mutually exclusive in contacting law enforcement. The incident response plan or communications plan must clearly delineate who may contact a law enforcement organization and when. This avoids multiple agencies being contacted concurrently and creating confusion.
+
+In addition to law enforcement, many organizations may also have an obligation to report to other organizations when certain types of incidents occur.
+
+For example, in the United States, Federal agencies must report incidents to the United States Computer Emergency Readiness Team (US-CERT). In the case of the US-CERT, it does not replace any agency reporting function, but rather exists as a coordinating organization with subject matter expertise and a global view of incident response.
+
+Another example from the United States is the Department of Health and Human Services (HHS) Office of Civil Rights. Healthcare providers under the jurisdiction of the Health Information Portability and Accountability Act must report certain breach to individuals, the media, the Secretary of HHS, and possibly the U.S. Federal Trade Commission. In addition to the parties noted prior, organizations may need to inform their Internet service providers, other incident response teams, software developers, owners of attacking systems (if suspected compromised), and affected parties.
+Media
+
+The media may become involved in a breach if the public may be impacted or the breach is of national or local interest. The incident handling team should work with existing organizational communications teams such as external affairs, legal, or office of communications to ensure the incident response process includes appropriate involvement of those parties. The incident response policy and plan should be consistent with any organizational standards or procedures for interaction with the media. As part of incident response plan training and testing, all members of the incident response process should be aware of how to handle interactions with the media and other communication partners. The training and testing should focus on the unapproved release of pre-decisional, deliberative, or sensitive information.
+
+Once an incident has occurred in which the public or media is interested, it is crucial that the organization maintains the status of the incident and provides accurate and timely updates to the media. Failure to do so can lead to the spread of speculation and inaccurate assumptions. Mock interviews and press conferences as part of incident response testing are an excellent way to help train staff in the appropriate handling of media affairs.
+Requirements for Effective Incident Handling
+
+To have effective and efficient incident handling, a solid foundation must exist. In this instance, the foundation is comprised of a corporate incident handling and response policy, clearly articulated procedures and guidelines that take into consideration the various legal implications of reacting to incidents, and the management and handling of evidence (digital, physical, and document based).
+
+The policy must be clear and concise, and provide a mandate for the incident response/handling team to deal with any and all incidents. The policy must also provide direction for employees on the escalation process to follow when a potential incident is discovered and how various notifications, contacts, and liaisons with third-party entities, the media, government, and law enforcement authorities are to be notified, by whom, and in what manner.

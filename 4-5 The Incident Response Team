@@ -1,0 +1,115 @@
+The Incident Response Team
+
+A properly staffed and trained response team is also required; the team can be virtual or permanent depending on the requirements of the organization.
+
+■■ Virtual teams usually consist of individuals that, while assigned to the response team, have other regular duties and are only called upon if there is some need to start the incident handling capability.
+
+■■ Some organizations have teams whose members are permanently assigned to the incident team and work in this capacity on a full-time basis.
+
+■■ A third model can be described as a hybrid of the virtual and permanent, with certain core members permanently assigned to the incident team and others called up as necessary.
+
+
+Core Team Areas
+
+Although the actual makeup of the response team depends upon the structure of the organization, there are core areas that need to be represented: legal department (in lieu of in-house legal counsel, arrangements should be made with external counsel), human resources, communications, executive management, physical/ corporate security, internal audit, IS security, and IT. Obviously, there needs to be representation by other pertinent business units as well as systems administrators and anyone else who can assist in the recovery and investigation of an incident.
+
+Once the team has been established, it must be trained and stay current with its training. This sounds easy enough at first glance, but the initial and ongoing training requires a budget and resources to cover for team members who are away at training; more than one organization has been stymied in its attempt to establish a response team because of the failure to anticipate realistic costs associated with training and education.
+Centralized and Decentralized Teams
+
+An organization’s incident response team can be developed in a centralized or decentralized matter. Each approach has benefits and drawbacks.
+
+A centralized incident response team provides a consistent approach for incident response throughout the organization, but is often only feasible for small or mid-sized organizations as larger organizations may be more geographically dispersed and have more compliance drivers.
+
+A decentralized response team on the other hand may be divided by function such as physical and logical, geographic area, or division. These teams often are able to react to specific incidents within their specific incident response area with speed and specialization. The keys to successful distributed teams are communications and reporting structures. If teams cannot coordinate across the organization, teams may double report with partial information creating confusion and conflict among the team and reporting entities.
+Team Structure
+
+The incident response team may be constructed of full-time employees, outsourced operations, or a hybrid. There are advantages to each approach:
+
+■■ Having full-time employees often provides the best coverage and organizational knowledge for incident response. The trade-off is that full-time employees can be expensive to maintain for an around-the-clock incident response capability.
+
+■■ The fully outsourced solution can often manage and support the need for around-the-clock incident response. The tradeoff is most outsourced incident response teams may not have in-depth organizational knowledge about systems, sensitive information, and how the organization conducts business.
+
+■■ The hybrid approach can bridge the best of both worlds, allowing an employee staff to maintain organizational knowledge and response while allowing the outsourced provider to focus on monitoring and reporting.
+
+Regardless of the approach, communication is essential to ensure incidents and important events are routed to the appropriate function or party.
+Team Conditions that Support Success
+
+According to NIST SP 800-61 R2, incident response teams perform best when the following conditions are met:
+
+■■ Budget enough funding to maintain, enhance, and expand proficiency in technical areas and security disciplines, as well as less technical topics such as the legal aspects of incident response. This should include sending staff to conferences and encouraging or otherwise incentivizing participation in conferences, ensuring the availability of technical references that promote deeper technical understanding, and occasionally bringing in outside experts (e.g., contractors) with deep technical knowledge in needed areas as funding permits.
+
+■■ Give team members opportunities to perform other tasks, such as creating educational materials, conducting security awareness workshops, and performing research.
+
+■■ Consider rotating staff members in and out of the incident response team, and participate in exchanges in which team members temporarily trade places with others (e.g., network administrators) to gain new technical skills.
+
+■■ Maintain sufficient staffing so that team members can have uninterrupted time off work (e.g., vacations).
+
+■■ Create a mentoring program to enable senior technical staff to help less experienced staff learn incident handling.
+
+■■ Develop incident handling scenarios and have the team members discuss how they would handle them.
+
+■■ The incident response team should be focused on service delivery to their organization. The team should strive to minimally provide near real-time continuous monitoring of information systems and be proactive through the distribution of advisories and threat notices. The incident response team should also be available to provide education and awareness for the organization’s partners and employees.
+Other Considerations
+
+Other important considerations for the incident response team include but are not limited to:
+
+■■ Contact information for team members and others within and outside the organization (primary and backup contacts), such as law enforcement and other incident response teams; information may include phone numbers, e-mail addresses, public encryption keys (in accordance with the encryption software described below), and instructions for verifying the contact’s identity
+
+■■ On-call information for other teams within the organization, including escalation information
+
+■■ Incident reporting mechanisms, such as phone numbers, e-mail addresses, online forms, and secure instant messaging systems that users can use to report suspected incidents; at least one mechanism should permit people to report incidents anonymously
+
+■■ Issue tracking system for tracking incident information, status, etc.
+
+■■ Smartphones to be carried by team members for off-hour support and onsite communications
+
+■■ Encryption software to be used for communications among team members, within the organization and with external parties; for Federal agencies, consider software that supports FIPS-validated encryption algorithms for extra assurance
+
+■■ “War room” for central communication and coordination; if a permanent war room is not necessary or practical, the team should create a procedure for procuring a temporary war room when needed
+
+■■ Secure storage facility for securing evidence and other sensitive materials
+
+■■ Incident analysis hardware and software
+
+■■ Digital forensic workstations and/or backup devices to create disk images, preserve log files, and save other relevant incident data
+
+■■ Laptops for activities such as analyzing data, sniffing packets, and writing reports
+
+■■ Spare workstations, servers, and networking equipment or the virtualized equivalents, which may be used for many purposes, such as restoring backups and trying out malware
+
+■■ Blank removable media
+
+■■ Portable printer to print copies of log files and other evidence from nonnetworked systems
+
+■■ Packet sniffers and protocol analyzers to capture and analyze network traffic
+
+■■ Digital forensic software to analyze disk images
+
+■■ Removable media with trusted versions of programs to be used to gather
+
+evidence from systems
+
+■■ Evidence gathering accessories, including hard-bound notebooks, digital cameras, audio recorders, chain of custody forms, evidence storage bags and tags, and evidence tape, to preserve evidence for possible legal actions
+
+■■ Port lists, including commonly used ports and Trojan horse ports
+
+■■ Documentation for OSs, applications, protocols, and intrusion detection and antivirus products
+
+■■ Network diagrams and lists of critical assets, such as database servers
+
+■■ Current baselines of expected network, system, and application activity
+
+■■ Cryptographic hashes of critical files to speed incident analysis, verification, and eradication
+
+■■ Access to images of clean OS and application installations for restoration and recovery purposes
+Detection and Analysis
+
+You will be presented with myriad events during the course of normal business operations. Many events occur normally because of business operations. Examples of these events are authorized logon events, authorized access to files, and normal network usage. You should be able to identify normal events and realize that these events have no adverse effect on the environment.
+
+Of the many events that occur on a daily basis, some of the events will be adverse. That is, the events will adversely affect the operation of information technology systems, network devices, applications, and services. Although these events may have a negative impact, they will not necessarily be classified as security incidents. For example, although a system may crash due to a hardware failure, this would not be considered a security incident because the failure was related to hardware and was not the result of a malicious activity that violated security policies.
+
+Attacks and incidents may spawn from a variety of sources. The incident response team must be aware of not only technical attacks such as web and e-mail attacks, but also physical attacks such as loss of sensitive information through portable media and social engineering attacks.
+
+Detecting an incident is one of the most challenging aspects of incident response. Incident detection is often hampered by a “noise floor” of false or unimportant events. For example, an organization’s external firewall may be scanned thousands of times every day by hundreds of organizations, countries, and individuals. This does not mean each of the scanning events is an incident. However, one or some of the scans could be an attacker actually determined to break into the organization
+
+An indicator is an event that means an incident is actually occurring or has occurred (like a workstation reaching out to a command and control network), while a precursor is an event that may signal an incident in the future (for example, a scanner continues to scan the organization’s network persistently using different scope and criteria each time).

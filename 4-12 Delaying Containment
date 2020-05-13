@@ -1,0 +1,27 @@
+Delaying Containment
+
+Delaying containment when a system is comprised by a suspected attacker is often a poor choice as it can lead to further attacks on more information systems. Arguments may be made that a security professional could observe the attacker to learn more about what is happening; however, that is best left to honeypots and experienced security engineers. There may be legal implications if the organization knows about the compromised system and then the compromised system is used to attack another system.
+Areas of Focus
+
+The team should instead focus on obtaining a forensic image of the RAM and hard drive of the compromised system and then determine how to mitigate the vulnerability that caused the compromise. Consult the legal team to determine if the image gathered must be suitable for law enforcement or be admissible in court. If needed for law enforcement or court, avoid violating the chain of custody and work with law enforcement or an experienced forensics team while creating an image.
+
+The initial incident and as much relevant information as possible should be documented in an incident management system. The incident should be updated as more information becomes available until the incident is deemed resolved by the security operations team. The documented incident is often one of the most important parts of reconstructing the attack and explaining what happened to third parties.
+Defining an Incident
+
+Only a subset of all adverse events will be classified as security incidents. It is the responsibility of the SSCP to review adverse events and determine if the event is actually a security incident. Making this determination and acting appropriately is one of the SSCP’s key responsibilities. When an issue is identified, identification may result from a preventative control but generally results from a detective control.
+
+■■ Preventative controls are security controls that are designed to prevent an incident from occurring. Examples of preventative controls include firewalls, access control lists, and intrusion prevention systems.
+
+■■ Detective controls are controls that help detect when an incident has occurred. Examples of detective controls include intrusion detection systems, network monitoring systems, and event logging.
+
+Reports from end users also provide an important method for identifying security incidents. End users may submit complaints to a help desk about virus warnings, poor system performance, or suspect results from standard business processes and related data outputs. Subsequent research into issues reported by end users may identify issues that would have been otherwise undiscovered.
+Triage
+
+Once a determination has been made that a security incident has occurred, the incident must be triaged to determine systems and data affected. An analysis of the incident must be performed to determine the overall impact. Impact can vary depending on both the number of systems affected as well as the sensitivity of the data affected. The assessed impact level of the incident will dictate the actions that should be taken as detailed within the incident response policy.
+Notification
+
+After a security incident has been identified and triaged, a determination must be made regarding who, if anyone, should be notified. Notification requirements may be explicitly stated within the incident response policy or the security practitioner may be required to provide notification based on the security practitioner’s best judgment.
+
+Generally, notification requirements will be based on the severity of the security event. For example, identification and correction of a virus affecting a single host may not require the security practitioner to provide notification to anyone. On the other hand, if an incident affects a significant number of hosts, affects a critical system, exposes critical data, or could result in revenue loss, immediate notification should be provided. In some situations, businesses must report any breach of health information no matter how small.
+
+When in doubt, the best course of action is to escalate the security incident. The security practitioner may escalate the incident to a senior technical staff member, the security practitioner’s manager, or the Information Security Officer depending on the security practitioner’s position and the structure of the security practitioner’s organization. Regardless, it is critical that timely notification is provided to all parties who should be aware of the incident or are directly involved in the incident response process.

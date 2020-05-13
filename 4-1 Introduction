@@ -1,0 +1,17 @@
+Introduction
+Incident Response
+
+Incident response is the process of responding in an organized manner to a compromise or attempted compromise of organizational information technology assets.
+
+As an SSCP, the security practitioner will be actively involved with the incident response process. The security practitioner may be the first person to identify that an incident has occurred or may identify an active attempt to compromise system security.
+
+Incident response best practices guide the organization so it can react in a timely manner. It is equally important not to perform any activities that may make the situation worse or that may compromise evidence required to investigate the incident and provide court acceptable results.
+Basic Definitions
+
+Before explaining the phases of the incident response process, some definitions should be established. NIST Special Publication 800-61 Rev2 “Computer Security Incident Handling Guide” provides an excellent source of guidance in this area. Per SP 800-61:
+
+■■ Event: “An event is any observable occurrence in a system or network. Events include a user connecting to a file share, a server receiving a request for a web page, a user sending electronic mail (e-mail), and a firewall blocking a connection attempt.”
+
+■■ Adverse Events: “Adverse events are events with a negative consequence, such as system crashes, network packet floods, unauthorized use of system privileges, defacement of a web page, and execution of malicious code that destroys data.”
+
+■■ Computer Security Incident: “The definition of a computer security incident has evolved. In the past, a computer security incident was thought of as a security-related adverse event in which there was a loss of confidentiality, disruption of data or system integrity, or disruption or denial of availability. New types of computer security incidents have emerged since then, necessitating an expanded definition of an incident. An incident can be thought of as a violation or imminent threat of violation of computer security policies, acceptable use policies, or standard security practices.”

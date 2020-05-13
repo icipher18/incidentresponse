@@ -1,0 +1,18 @@
+Intrusion Detection Techniques
+
+Intrusion systems use a number of techniques to determine whether an attack is underway:
+
+■■ Signature- or pattern-matching systems examine the available information (logs or network traffic) to determine if it matches a known attack.
+
+■■ Protocol-anomaly-based systems examine network traffic to determine if what it sees conforms to the defined standard for that protocol; for example, as it is defined in a Request for Comment or RFC.
+
+■■ Statistical-anomaly-based systems establish a baseline of normal traffic patterns over time and detect any deviations from that baseline. Some also use heuristics to evaluate the intended behavior of network traffic to determine if it intended to be malicious or not. Most modern systems combine two or more of these techniques together to provide a more accurate analysis before it decides whether it sees an attack.
+False Positives and False Negatives
+
+In most cases, there will continue to be problems associated with false positives as well as false negatives.
+
+■■ False positives occur when the IDS or IPS identifies something as an attack, but it is in fact normal traffic
+
+■■ False negatives occur when it failed to interpret something as an attack when it should have
+
+In these cases, intrusion systems must be carefully “tuned” to ensure that these are kept to a minimum. An IDS requires frequent to constant attention and the response of a human who is knowledgeable enough with the system and types of normal activity to make an educated judgment about the relevance and significance of the event. Alerts need to be investigated to determine if they represent an actual event.

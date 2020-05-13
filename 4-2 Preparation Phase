@@ -1,0 +1,33 @@
+Preparation
+
+Preparation is the key to incident response.
+
+An established incident response policy and procedure is the key to successful incident response. The incident response policy and related incident response procedures should clearly indicate who the members of the incident response team are and should define incident response responsibilities for each team member. It should establish a phased approach to incident response. It should describe the exact steps that should be performed during each phase of incident response.
+Elements of an Incident Response Policy
+
+An incident response policy is the first mandatory step in ensuring appropriate incident response. The SSCP may be called on to develop the policy or hold a major role in the policy depending on the size and complexity of the organization. The policy should minimally contain the following elements.
+
+■■ Statement of management support and endorsement
+
+■■ Statement of alignment with the organization’s strategy, mission, vision, objectives, and goals
+
+■■ Objectives of the policy
+
+■■ Scope and limitations
+
+■■ Definitions of terms
+
+■■ Roles and responsibilities
+
+■■ Prioritization of risk when discovered
+
+■■ Metrics and performance measures
+
+■■ Communications planning
+
+■■ Mandatory adherence to incident response plans, processes, and procedures
+
+■■ How the policy complies with laws, regulations, or standards to which the organization must adhere
+Incident Response Plan
+
+The Policy should reference an incident response plan or procedure that all employees will follow depending on their role in the incident response process. The plan may contain several procedures and standards related to incident response. It is a living instantiation of the organization’s incident response policy. The plan covers with greater specificity all areas of the policy and may include areas covering the maturation of the incident response process and how the incident response process fits with other areas such as risk management and external communications. The organization’s vision, strategy, and mission should shape the incident response process.

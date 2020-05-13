@@ -1,0 +1,65 @@
+Containment, Eradication, and Recovery
+
+Containment limits the damage caused by security incident
+
+Once notification has been provided, a decision should be made regarding whether the incident should be contained or eradicated. Normally, an SSCP will not make this decision directly, but rather will receive guidance from a manager or executive within the organization. Based on the magnitude of the incident, a decision from legal counsel may be required.
+
+The goal of containment is to limit the damage caused by the security incident. Containment is required for most types of security incidents, including those that spread naturally. Some types of incidents, such as worms, spread rapidly and must be contained quickly to prevent affecting other systems. Other events, such as successful hacking attempts, should be contained by restricting access to the affected system or by ensuring that the affected system is unable to connect to additional systems or network resources that may not be compromised.
+
+It is important that incident response procedures include containment instructions. Responders need to know the exact steps that they should perform to contain security incidents. If containment instructions are not included in incident response procedures, responders will either be forced to respond rapidly using a “best guess” approach or wait for containment instructions to be provided to them. In either case, critical steps in the containment process are likely to be missed. Missing steps will result in increased response and recovery times.
+
+The steps taken during the containment process will vary depending on the type of security incident. For example, the steps taken when containing a virus outbreak would be different from the steps taken if credit card data were compromised. Incident response procedures should include a variety of containment strategies based on the type of security incident being contained.
+
+Although a variety of containment strategies could be utilized based on the nature of the incident, some containment activities are commonly performed regardless of the strategy employed. Keep in mind that a complete system image or backup should be taken before altering the system.
+
+Forensics will be discussed later within this module, but it must be noted that if a complete system backup is not taken, valuable forensic data may be lost during the containment process.
+Common Containment Activities
+
+■■ Backing up the affected system for subsequent forensic analysis
+
+■■ Disconnecting the affected system from the network
+
+■■ Changing system, application, and user passwords
+
+■■ Analyzing network traffic with packet sniffers or network monitoring tools to identify the source of security incidents
+
+■■ Modifying firewall rules to restrict access to affected systems
+
+■■ Reviewing system, application, and security logs for additional data that may be useful in the containment process
+Eradication
+
+Once a security incident has been contained, the next step is to eradicate the incident. Eradication is performed to remove malicious code such as viruses, worms, and Trojan horses. Eradication can also be performed to remove tools and backdoors that may have been used to compromise affected hosts.
+
+Antivirus software is generally effective in removing malicious code from affected systems. Keep in mind that antivirus software signature definition files must be routinely updated. Antivirus signature files are used by antivirus software to identify malicious code infections. Routine updates ensure that antivirus software is able to identify and remove newly released malicious code.
+
+In many cases, eradication will not be required. This is true when systems are rebuilt from an image or restored from backup. Reimaging end-user workstations may prove to be a quicker and more reliable option for recovering from a security incident than trying to eradicate the incident. By reimaging the system, it can be restored to a known good configuration with minimal downtime. As an SSCP, you may be required to determine if eradication or reimaging is the more appropriate solution based on the nature of the incident. This decision may also be made by the system administrator of the affected system.
+
+Administrators may decide that they prefer to restore affected systems from backup rather than attempting to eradicate the security incident. If it is not possible to validate that a security incident has been fully eradicated, restoration is the only viable choice. The system may either be rebuilt from scratch or restored from backup based on the nature of the system, the amount of time required, and the complexity of the process.
+Post-Incident Activity
+
+Once security incident recovery has been completed, post-incident activities should be performed.
+
+A post-incident report should be prepared that documents the security incident and all activities performed to recover from the incident. The report should include a technical section that details the root cause of the security incident that can generally be determined via a forensic analysis, actions taken to contain the incident, eradication and recovery steps, and the final restoration or recovery point to which that data were restored. The report should also contain a management section that summarizes losses to the organization, residuals risks, lessons learned, and methods for improving security incident response. Postincident reports should be distributed to appropriate parties and collaboratively reviewed.
+
+The incident response policy and related procedures should be updated, as necessary, based on lessons learned during the incident response process. By updating these documents, organizations can continually improve their incident response process. This will result in reduced recovery times and thus provide financial savings to the organization.
+Effective Incident Response
+
+Effective incident response is a critical security function that an SSCP should be able to perform. To perform this function, be aware of incident response policies and procedure and be prepared to act immediately. You must be able to analyze potential security incidents and determine if an actual security incident has transpired. Once a security incident has been confirmed, it is imperative to follow the defined procedure to ensure that incidents are contained and eradicated in accordance with organizational requirements.
+
+It is equally important that while recovering from an incident, evidence is handled appropriately and that a chain of custody is maintained. Finally, postincident activities must be performed, incident reports finalized, and procedures and policies updated where appropriate to reflect lessons learned from the incident response process.
+Implementation of Countermeasures
+
+Countermeasures need to be implemented in a strategic manner that show results both immediately and over the longer term. In doing so, particular attention should be paid to the key elements that underlie and increase risk. Furthermore, there are important differences between the various countermeasures in terms of their impact, their costs, and the timelines within which they can be implemented, which will condition the options for action.
+Implementation Steps
+
+The following is a suggested step-by-step implementation of countermeasures:
+
+■■ Increase user awareness of the problem. This could involve undertaking information campaigns based on well-researched information, sensitizing users to the nature of the risk, and encouraging changes in attitudes and behavior. In itself, it is not expected to yield high reductions in risk, but it is a prerequisite for achieving greater understanding of the problem and encouraging acceptance of other countermeasures. Furthermore, the combination of other countermeasures, particularly enforcement, with communication can bring about changes in attitudes toward risk over the longer term.
+
+■■ Implement overall improvements that address risk. This includes ensuring the existence of appropriate policies and rigorous enforcement of standards, focusing on areas where risk is especially high. There will be important costs in the form of resources used for enforcement. Effective communication will thus be required to gain user support. However, user resistance may be expected, particularly with regard to enforcement.
+
+■■ Provide effective disincentives for inappropriate behavior. Enforcement will only be effective if it is backed up with concrete repercussions for non-compliance.
+
+■■ Improve user training, including a stronger focus on self-awareness and understanding the circumstances that lead to safer interaction/usage of systems. Such changes will require considerable prior analysis, meaning that they will require time for implementation. While this measure is important, it is not likely to have the same impact as countermeasures that effectively limit exposure to risk.
+
+■■ Understand the benefits of “new” technological solutions for monitoring and enforcement, and selectively implement these where they prove to be effective. This is a longer-term initiative, particularly as it will involve research and development. While the potential is high, the actual gains to be achieved from new technologies are unknown. These solutions will initially generate new costs for implementing technology, which could cause resistance from users. Concerns regarding the legal side effects of new technologies will also need to be addressed, particularly if they are perceived to relinquish the users of responsibility for operating a system.

@@ -1,0 +1,10 @@
+Inline SSL Decryption Devices
+
+Another important consideration is encrypted traffic. While a packet sniffer works well for capturing raw packet data, it will not help you understand the data if it is encrypted. SSL encryption and encrypted files will be captured using a packet sniffer, but they will not be able to be opened unless the incident response team can decrypt the traffic. One way to eliminate SSL encryption concerns is using an inline SSL decryption device. These devices perform an operational Man-inthe- Middle attack and intercept SSL encrypted traffic for full packet capture and analysis. As with packet inspection, due to the privacy concerns involved, ensure the organization’s legal counsel has reviewed any SSL decryption practices.
+Incident Documentation
+
+Incident analysis includes thorough incident documentation. Minimally, the who, what, why, where, and when’s of the incident should be covered. A centralized incident management system enables multiple incident responders to work on the same incident and receive updated information.
+
+Organizations may use the ticketing system as their helpdesk in some cases as long as it meets the requirements of the organization and the incident response team. Documentation may also include audio logs, video logs, and written narratives describing the impact of the incident on the system and the organization. Should an incident lead to a criminal or civil action, often this information will be brought in as evidence.
+
+SSL encryption concerns are eliminated using inline SSL decryption devices.

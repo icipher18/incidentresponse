@@ -1,0 +1,14 @@
+Intrusion Detection Systems (IDS) and Intrusion Prevention Systems (IPS)
+
+Intrusion detection and prevention systems are used to identify and respond to suspected security-related events in real-time or near-real-time. IDS will use available information to determine if an attack is underway, send alerts, and provide limited response capabilities.
+
+IPS will use available information to determine if an attack is underway, send alerts but also block the attack from reaching its intended target.
+
+The distinction between IDS and IPS is very important since it materially affects both how the system must be deployed and its effect on the systems it is monitoring. If an IDS is used, it may be deployed out-of-band, meaning that it is not deployed in the middle of the communications path and will not affect normal processing or cause latency.
+
+Any attacks, however, will likely reach their intended target. If an IPS is used, it must be deployed in-line (also known as in-band), meaning that it is deployed in the middle of the communications path. Because it is in-line, it will cause some latency and slow down normal processing to a slight extent. Detected attacks, however, will not likely reach their intended targets. On many modern systems, both IDS and IPS techniques can be used within the same device, allowing you to decide whether to use one technique or the other.
+Types of Intrusion Systems
+
+■■ Network-based intrusion systems focus on the analysis of network traffic
+
+■■ Host-based intrusion systems focus on audit logs and processes inside a single system.ystem
