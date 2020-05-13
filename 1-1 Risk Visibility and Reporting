@@ -1,9 +1,0 @@
-Risk Visibility and Reporting
-
-Once assessed and quantified or qualified, risk should be reported and recorded. Organizations should have a way to aggregate risk in a centralized function that combines information security risk with other risk such as market risk, legal risk, human capital risk, and financial risk.
-Risk Register
-
-The organizational risk executive function serves as a way to understand total risk to the organization. Risk is aggregated in a system called a Risk Register, or in some cases, a risk dashboard. As an SSCP, you must ensure only risk information (not vulnerability or threat information) is reported to the Risk Register. The Risk Register serves as a way for the organization to know its possible exposure at a given time.
-
-The Risk Register will generally be shared with stakeholders, allowing them to be kept aware of issues and providing a means of tracking the response to issues. It can be used to flag new risks and to make suggestions on what course of action to take to resolve any issues. The Risk Register is there to help with the decision making process and enables managers and stakeholders to handle risk in the most appropriate way. The Risk Register is a document that contains information about identified risks, analysis of risk severity, and evaluations of the possible solutions to be applied. Presenting this in a spreadsheet is often the easiest way to manage things, so that key information can be found and applied quickly and easily.
-
